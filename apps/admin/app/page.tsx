@@ -1,19 +1,25 @@
-import styles from './index.module.less';
-
-export function Index() {
+import styles from './page.module.scss';
+import { useSharedHook } from '@monerium/hooks';
+export default async function Index() {
   /*
    * Replace the elements below with your own.
    *
-   * Note: The corresponding styles are in the ./index.less file.
+   * Note: The corresponding styles are in the ./index.scss file.
    */
+  const message = useSharedHook({});
+
   return (
     <div className={styles.page}>
+      <h1>{message}</h1>
+      <h1>{message}</h1>
+      <h1>{message}</h1>
+      <h1>{message}</h1>
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome monorepo 👋
+              Welcome admin 👋
             </h1>
           </div>
 
@@ -444,9 +450,8 @@ export function Index() {
             </svg>
           </p>
         </div>
+        h
       </div>
     </div>
   );
 }
-
-export default Index;

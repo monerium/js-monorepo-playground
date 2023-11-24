@@ -51,11 +51,14 @@
     "@nx/react": {
       "application": {
         "babel": true
+      },
+      "library": {
+        "unitTestRunner": "jest"
       }
     },
     "@nx/next": {
       "application": {
-        "style": "less",
+        "style": "scss",
         "linter": "eslint"
       }
     }

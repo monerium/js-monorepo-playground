@@ -1,7 +1,7 @@
 {
-  "name": "monorepo",
+  "name": "customer",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/monorepo",
+  "sourceRoot": "apps/customer",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/monorepo"
+        "outputPath": "dist/apps/customer"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/monorepo"
+          "outputPath": "apps/customer"
         },
         "production": {}
       }
@@ -22,16 +22,17 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "monorepo:build",
-        "dev": true
+        "buildTarget": "customer:build",
+        "dev": true,
+        "port": 3000
       },
       "configurations": {
         "development": {
-          "buildTarget": "monorepo:build:development",
+          "buildTarget": "customer:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "monorepo:build:production",
+          "buildTarget": "customer:build:production",
           "dev": false
         }
       }
@@ -39,21 +40,21 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "monorepo:build:production"
+        "buildTarget": "customer:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/monorepo/jest.config.ts"
+        "jestConfig": "apps/customer/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/monorepo/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/customer/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
