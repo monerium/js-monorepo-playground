@@ -5,9 +5,13 @@
 ## Useful links
 
 https://nx.dev/nx-api/next
+
 https://nx.dev/nx-api/react
+
 https://nx.dev/nx-api/react/generators/application
+
 https://nx.dev/nx-api/react/generators/library
+
 https://nx.dev/nx-api/react/generators
 
 Next.js App Router: https://www.youtube.com/watch?v=gSSsZReIFRk&ab_channel=Vercel
@@ -19,6 +23,7 @@ Next.js App Router: https://www.youtube.com/watch?v=gSSsZReIFRk&ab_channel=Verce
 ## Start the app
 
 `nx serve customer` http://localhost:3001/
+
 `nx serve admin` http://localhost:3000/
 
 ## Generate code
