@@ -1,5 +1,6 @@
 import styles from './page.module.scss';
 import { useSharedHook } from '@monerium/hooks';
+import Test from './test';
 
 export default async function Index() {
   /*
@@ -11,6 +12,7 @@ export default async function Index() {
 
   return (
     <div className={styles.page}>
+      <Test />
       <h1>{message}</h1>
       <h1>{message}</h1>
       <h1>{message}</h1>
