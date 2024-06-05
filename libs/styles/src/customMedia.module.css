@@ -1,0 +1,10 @@
+/*
+  * Media queries breakpoints
+  * ======================================================================== */
+
+  @custom-media --screen-xs-max (max-width: 320px); /* extra small screen / phone portrait */
+  @custom-media --screen-sm-max (max-width: 574px); /* small screen / phone landscape */
+  @custom-media --screen-md-max (max-width: 767px); /* medium screen / tablet */
+  @custom-media --screen-lg-max (max-width: 990px); /* large screen / desktop */
+  @custom-media --screen-xl-max (max-width: 1199px); /* extra Large screen / wide desktop */
+  @custom-media --screen-max-height (max-height: 600px); /* extra Large screen / wide desktop */

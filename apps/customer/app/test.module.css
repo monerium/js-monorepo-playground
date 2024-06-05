@@ -1,0 +1,11 @@
+
+@media (--screen-sm-max) {
+  .test {
+    color: red;
+  }
+}
+
+.test {
+  color: var(--brand-color-blue);
+}
+

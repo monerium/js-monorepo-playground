@@ -2,9 +2,9 @@ import { AnyAction } from 'redux';
 import { CONFIRM_SUCCESS } from '../Confirm/constants';
 import { SIGNUP_SUCCESS } from '../Signup/constants';
 import constants from './constants';
-// import { IamLoginReduxStore } from './types';
+import { IamLoginReduxStore } from './types';
 
-const initial = {
+const initial: IamLoginReduxStore = {
   isLoginRequest: false,
   isLoginSuccess: false,
   isLoginFailure: undefined,

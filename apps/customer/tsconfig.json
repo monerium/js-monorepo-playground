@@ -26,7 +26,7 @@
     "../../apps/customer/.next/types/**/*.ts",
     "../../dist/apps/customer/.next/types/**/*.ts",
     "next-env.d.ts"
-  ],
+, ".postcssrc.js"  ],
   "exclude": [
     "node_modules",
     "jest.config.ts",

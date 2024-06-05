@@ -15,7 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@monerium/hooks": ["libs/hooks/src/index.ts"]
+      "@monerium/hooks": ["libs/hooks/src/index.ts"],
+      "@monerium/types": ["libs/types/src/index.ts"],
+      "@monerium/types/*": ["libs/types/src/*"],
+      "@monerium/components": ["libs/components/src/index.ts"],
+      "@monerium/components/*": ["libs/components/src/*"],
+      // "@monerium/styles": ["libs/styles/src/index.ts"],
+      "@monerium/styles/*": ["libs/styles/src/*"], // not sure this is usable like this
+      "@monerium/services/*": ["libs/services/src/*"],
     }
   },
   "exclude": ["node_modules", "tmp"]
