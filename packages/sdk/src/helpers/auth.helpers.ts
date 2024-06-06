@@ -23,7 +23,6 @@ export const getAuthFlowParams = (
     state,
     chainId,
     chain,
-    network,
     address,
     signature,
   } = args;
@@ -34,9 +33,6 @@ export const getAuthFlowParams = (
         ...(signature !== undefined ? { signature: signature } : {}),
         ...(chainId !== undefined || chain !== undefined
           ? { chain: chainId ? getChain(chainId) : chain }
-          : {}),
-        ...(chainId !== undefined || network !== undefined
-          ? { network: chainId ? getNetwork(chainId) : network }
           : {}),
       }
     : {};

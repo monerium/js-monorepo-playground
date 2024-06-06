@@ -96,6 +96,7 @@ export const getChain = (chainId: number): Chain => {
 /**
  * Get the corresponding Monerium SDK Network from the current chain id
  * @returns The Network
+ * @deprecated network will be removed from Monerium API in the near future.
  */
 export const getNetwork = (chainId: number): Networks => {
   switch (chainId) {
@@ -120,8 +121,7 @@ export const getIban = (profile: Profile, address: string, chainId: number) => {
       (account) =>
         account.address === address &&
         account.iban &&
-        account.chain === getChain(chainId) &&
-        account.network === getNetwork(chainId)
+        account.chain === getChain(chainId)
     )?.iban ?? ""
   );
 };
@@ -151,7 +151,6 @@ export const mapChainAndNetwork = (body: any) => {
     return {
       ...rest,
       chain: getChain(chainId),
-      network: getNetwork(chainId),
     };
   }
   return body;
