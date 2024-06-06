@@ -5,9 +5,7 @@ import { useMonerium } from "@monerium/sdk-react-provider";
 export const MoneriumConnect = () => {
   const { authorize, isAuthorized, profile, balances, tokens, orders } =
     useMonerium();
-  //   useEffect(() => {
-  //     console.log("im client");
-  //   }, []);
+
   console.log("profile", profile);
   return (
     <div>
