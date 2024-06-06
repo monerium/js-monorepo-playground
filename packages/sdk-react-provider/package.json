@@ -1,0 +1,30 @@
+{
+  "name": "@monerium/sdk-react-provider",
+  "version": "0.0.10",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup --dts",
+    "lint": "eslint ."
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monerium/public-monorepo.git",
+    "directory": "libs/sdk-react-provider"
+  },
+  "dependencies": {
+    "@monerium/sdk": "workspace:*",
+    "@types/react": "^18.2.61",
+    "react": "^18.2.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
