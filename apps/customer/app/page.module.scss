@@ -1,0 +1,19 @@
+@import "~rfs/scss";
+
+
+.logo {
+    position: relative;
+}
+.logoWrapper {
+    margin: 48px 0 32px;
+    height: 25vh;
+    position: relative;
+}
+
+@media (max-width: 400px) {
+    .logoWrapper {
+        margin: 24px 0 16px;
+        height: 15vh;
+    }
+    
+}

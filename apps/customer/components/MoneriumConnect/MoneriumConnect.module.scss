@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    :global(.MuiButton-root) {
+        margin: 16px;
+        border-radius: 50px;
+        text-wrap: nowrap;
+    }
+}

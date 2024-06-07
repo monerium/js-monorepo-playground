@@ -1,0 +1,47 @@
+/* https://m2.material.io/inline-tools/color/ */
+@import "~rfs/scss";
+// @import 'rfs';
+
+:root {
+  // --brand-color-blue: #2c6ca7;
+  --brand-color-blue: #0092D4;
+  --brand-color-blue-dark: #08a4e8;
+  // --brand-color-blue-dark: #5ca9dc;
+}
+
+[data-mui-color-scheme="light"] {
+  --mui-palette-primary-main: var(--brand-color-blue);
+}
+[data-mui-color-scheme="dark"] {
+  --mui-palette-primary-main: var(--brand-color-blue-dark);
+  img {
+    filter: invert(1);
+  }
+}
+
+body {
+  font-synthesis: none;
+
+  .MuiContainer-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .MuiTypography-h1 {
+    font-size: rfs(3.5rem);
+    font-weight: 700;
+  }
+  .MuiTypography-h2 {
+    font-size: rfs(2.5rem);
+    font-weight: 400;
+  }
+  .MuiTypography-h3 {
+    font-size: rfs(1.5rem);
+    font-weight: 400;
+  }
+  // .MuiButton-root {
+  //   border-radius: 50px;
+  // }
+}
+
+

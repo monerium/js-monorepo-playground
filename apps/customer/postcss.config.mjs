@@ -1,6 +1,10 @@
 /** @type {import('postcss-load-config').Config} */
+import rfs from "rfs";
+
 const config = {
   plugins: [
+    "postcss-import",
+
     "postcss-flexbugs-fixes",
     [
       "postcss-preset-env",
@@ -14,6 +18,7 @@ const config = {
         },
       },
     ],
+    rfs({}),
   ],
 };
 
