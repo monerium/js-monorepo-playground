@@ -26,6 +26,8 @@ export interface MoneriumContextValue {
   orders: Order[];
   tokens: Token[];
   error: unknown;
+  /** Is still checking if there is an active session */
+  loadingAuth: boolean;
 }
 
 export const MoneriumContext = createContext<MoneriumContextValue | null>(null);

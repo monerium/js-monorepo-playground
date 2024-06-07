@@ -36,6 +36,7 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
   const [error, setError] = useState<Error | unknown | null>(null);
   const [orders, setOrders] = useState<Order[]>([]);
   const [tokens, setTokens] = useState<Token[]>([]);
+  const [loadingAuth, setLoadingAuth] = useState(true);
 
   // Initialize the SDK
   useEffect(() => {
@@ -50,7 +51,13 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
   useEffect(() => {
     const connect = async () => {
       if (monerium) {
-        setIsAuthorized(await monerium.getAccess());
+        try {
+          setIsAuthorized(await monerium.getAccess());
+        } catch (error) {
+          console.error('Failed to get access:', error);
+        } finally {
+          setLoadingAuth(false);
+        }
       }
     };
 
@@ -124,9 +131,8 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
 
           let documentId;
           if (parseInt(orderDetails.amount) > 15000 && supportingDocument) {
-            const uploadedDocument = await monerium.uploadSupportingDocument(
-              supportingDocument
-            );
+            const uploadedDocument =
+              await monerium.uploadSupportingDocument(supportingDocument);
             documentId = uploadedDocument.id;
           }
 
@@ -145,7 +151,7 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
         }
       }
     },
-    [monerium, isAuthorized]
+    [monerium, isAuthorized],
   );
 
   const linkAddress = useCallback(
@@ -164,7 +170,7 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
         }
       }
     },
-    [monerium, isAuthorized, profile]
+    [monerium, isAuthorized, profile],
   );
 
   //
@@ -186,6 +192,7 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
         orders,
         tokens,
         error,
+        loadingAuth,
       }}
     >
       {children}
