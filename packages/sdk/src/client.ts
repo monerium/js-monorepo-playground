@@ -134,7 +134,7 @@ export class MoneriumClient {
     });
 
     // Redirect to the authFlow
-    window.location.replace(authFlowUrl);
+    window.location.assign(authFlowUrl);
   }
 
   /**
@@ -435,9 +435,7 @@ export class MoneriumClient {
     }
   }
   subscribeToOrderNotifications = (): WebSocket => {
-    const socketUrl = `${this.#env.wss}/profiles/${
-      this.bearerProfile?.profile
-    }/orders?access_token=${this.bearerProfile?.access_token}`;
+    const socketUrl = `${this.#env.wss}/profiles/${this.bearerProfile?.profile}/orders?access_token=${this.bearerProfile?.access_token}`;
 
     const socket = new WebSocket(socketUrl);
 
