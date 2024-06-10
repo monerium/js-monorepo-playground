@@ -1,25 +1,25 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.scss";
-import { Providers } from "./providers";
-import { cookies } from "next/headers";
-import ThemeModeToggle from "../components/ThemeModeToggle";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import './globals.scss';
+import { Providers } from './providers';
+import { cookies } from 'next/headers';
+import ThemeModeToggle from '../components/ThemeModeToggle';
 
-import "@rainbow-me/rainbowkit/styles.css";
+import '@rainbow-me/rainbowkit/styles.css';
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
 });
 
 export const metadata: Metadata = {
-  title: "Monerium",
+  title: 'Monerium',
   description:
-    "Monerium issues onchain fiat – directly transferable between your wallet and bank accounts.",
+    'Monerium issues onchain fiat – directly transferable between your wallet and bank accounts.',
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = cookies();
-  const themeMode = cookieStore?.get("themeMode")?.value || "light";
+  const themeMode = cookieStore?.get('themeMode')?.value || 'light';
   return (
     <html lang="en" data-mui-color-scheme={themeMode}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

@@ -5,11 +5,13 @@ Add precondition hooks - husky.
 Add CI/CD - github actions
 https://turbo.build/repo/docs/guides/ci-vendors/github-actions
 
-Customer
+Add auto arrange imports
 
-- Replace tailwind example with sass modules
+# Customer
 
-SDK
+- ?
+
+# SDK
 
 - activate publish
   https://github.com/monerium/js-sdk/blob/main/libs/sdk/.yarnrc.yml
@@ -20,13 +22,18 @@ SDK
 - update packagejson
   https://github.com/monerium/js-sdk/blob/main/libs/sdk/package.json
 
-SDK React Provider
+- loadingBalances doesn't work
+
+# SDK React Provider
 
 - activate linter
   https://turbo.build/repo/docs/guides/tools/eslint
 - activate tests
 
-Add storybook package.
+- Today we do a fetch for everything as soon as we know the user is authenticated. This is not ideal, it gives the user no control over what is fetched and when. We should change this so that we only fetch what is absolutely necessary and let the user decide when to fetch the rest.
+  Add storybook package.
+
+# Other
 
 Syncpack?
 https://jamiemason.github.io/syncpack/

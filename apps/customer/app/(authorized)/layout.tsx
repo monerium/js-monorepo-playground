@@ -1,8 +1,9 @@
-"use client";
-import { useMonerium } from "@monerium/sdk-react-provider";
-import Box from "@mui/material/Box";
-import { useRouter } from "next/navigation";
-import { LoadingScreen } from "../../components/LoadingScreen";
+'use client';
+import { useMonerium } from '@monerium/sdk-react-provider';
+import Box from '@mui/material/Box';
+import { useRouter } from 'next/navigation';
+import { LoadingScreen } from '../../components/LoadingScreen';
+import BottomNavigation from '../../components/Navigation/BottomNavigation';
 
 export default function AuthorizedLayout({
   children,
@@ -17,15 +18,17 @@ export default function AuthorizedLayout({
   }
 
   if (!loadingAuth && !isAuthorized) {
-    router.push("/");
+    router.push('/');
   }
 
   if (isAuthorized) {
     return (
-      <Box sx={{ p: 2 }}>
-        <h1>layout</h1>
-        {children}
-      </Box>
+      <>
+        <Box sx={{ pb: 7 }}>
+          {children}
+          <BottomNavigation />
+        </Box>
+      </>
     );
   }
   return null;

@@ -8,6 +8,8 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import TotalBalance from '../../../components/Dashboard/TotalBalance';
+import ChainFilter from '../../../components/Dashboard/ChainFilter';
 
 // import { useMonerium } from "@monerium/sdk-react-provider";
 
@@ -23,10 +25,10 @@ export default function Home() {
   );
 
   return (
-    <Box sx={{ pt: 3 }}>
-      <Typography variant="h3" sx={{ p: 2 }}>
-        Accounts
-      </Typography>
+    <Box sx={{ pt: 7 }}>
+      <ChainFilter />
+      <TotalBalance />
+
       <List>
         {balances?.map((account, i) => (
           <ListItemButton key={i + account.id}>
