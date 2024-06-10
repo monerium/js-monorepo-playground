@@ -3,9 +3,6 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import ChainIcon from '../../Chains/Icon';
 import { ChainSelection } from '../types';
-import Select from '@mui/material/Select';
-import FormControl from '@mui/material/FormControl';
-import MenuItem from '@mui/material/MenuItem';
 
 const ChainFilter = memo(
   ({

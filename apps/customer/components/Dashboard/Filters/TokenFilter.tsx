@@ -4,9 +4,9 @@ import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import { Currency } from '@monerium/sdk';
 import TokenIcon from '../../Tokens/Icon';
-import s from './CurrencyFilter.module.scss';
+import s from './TokenFilter.module.scss';
 
-const CurrencyFilter = memo(
+const TokenFilter = memo(
   ({
     selected,
     setSelected,
@@ -20,16 +20,21 @@ const CurrencyFilter = memo(
           value={selected}
           onChange={(e) => setSelected(e.target.value as Currency)}
           displayEmpty
+          className={s.icon}
         >
-          <MenuItem value="eur">
-            <TokenIcon currency={'eur' as Currency} className={s.icon} /> EURe
+          <MenuItem value={Currency.eur}>
+            <div className={s.row}>
+              <TokenIcon currency={Currency.eur} className={s.icon} /> EURe
+            </div>
           </MenuItem>
-          <MenuItem value="gbp">
-            <TokenIcon currency={'gbp' as Currency} className={s.icon} /> GBPe
+          <MenuItem value={Currency.gbp}>
+            <div className={s.row}>
+              <TokenIcon currency={Currency.gbp} className={s.icon} /> GBPe
+            </div>
           </MenuItem>
         </Select>
       </FormControl>
     );
   }
 );
-export default CurrencyFilter;
+export default TokenFilter;
