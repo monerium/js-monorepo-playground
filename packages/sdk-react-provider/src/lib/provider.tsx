@@ -75,14 +75,19 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
       if (monerium && isAuthorized) {
         try {
           setLoading(true);
-          const authCtx = await monerium.getAuthContext();
-          const profileData = await monerium.getProfile(authCtx.defaultProfile);
-          const balanceData = await monerium.getBalances();
+          const [authCtx] = await Promise.all([
+            monerium.getAuthContext(),
+            getBalances(),
+          ]);
+
+          const [profileData, tokensData] = await Promise.all([
+            monerium.getProfile(authCtx.defaultProfile),
+            monerium.getTokens(),
+          ]);
+
           const ordersData = await monerium.getOrders();
-          const tokensData = await monerium.getTokens();
 
           setProfile(profileData);
-          setBalances(balanceData);
           setOrders(ordersData);
           setTokens(tokensData);
         } catch (err) {
@@ -151,7 +156,7 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
         }
       }
     },
-    [monerium, isAuthorized],
+    [monerium, isAuthorized]
   );
 
   const linkAddress = useCallback(
@@ -170,7 +175,7 @@ export const MoneriumProvider: FC<MoneriumProviderProps> = ({
         }
       }
     },
-    [monerium, isAuthorized, profile],
+    [monerium, isAuthorized, profile]
   );
 
   //
