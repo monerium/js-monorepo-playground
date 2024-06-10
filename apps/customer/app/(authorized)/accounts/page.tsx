@@ -14,13 +14,13 @@ import Typography from '@mui/material/Typography';
 export default function Home() {
   const { balances, loadingBalances } = useMonerium();
 
-  console.log(
-    '%c balances',
-    'color:white; padding: 30px; background-color: darkgreen',
-    balances,
-    loadingBalances,
-    balances?.find((b) => b.balances.find((a) => a.currency === 'gbp'))
-  );
+  // console.log(
+  //   '%c balances',
+  //   'color:white; padding: 30px; background-color: darkgreen',
+  //   balances,
+  //   loadingBalances,
+  //   balances?.find((b) => b.balances.find((a) => a.currency === 'gbp'))
+  // );
 
   return (
     <Box sx={{ pt: 3 }}>

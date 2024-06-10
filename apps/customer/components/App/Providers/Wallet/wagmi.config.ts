@@ -2,7 +2,7 @@ import { getDefaultConfig } from '@rainbow-me/rainbowkit';
 import { Config, http } from 'wagmi';
 import { mainnet, sepolia } from 'wagmi/chains';
 
-export const config = getDefaultConfig({
+const config = getDefaultConfig({
   appName: 'Monerium',
   projectId: 'YOUR_PROJECT_ID',
   chains: [mainnet, sepolia],
@@ -11,3 +11,4 @@ export const config = getDefaultConfig({
   //   [sepolia.id]: http("https://eth-sepolia.g.alchemy.com/v2/..."),
   // },
 }) as Config;
+export default config;

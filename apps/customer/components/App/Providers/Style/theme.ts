@@ -19,29 +19,19 @@ const theme = experimental_extendTheme({
 
   components: {
     MuiButton: {
+      /** Custom button variant 'plain' */
       variants: [
         {
           props: { variant: 'plain' },
           style: {
             textTransform: 'none',
             border: 'none',
-            backgroundColor: '#fff',
-            ':hover': {
-              backgroundColor: '#B3B3B3',
-            },
+            backgroundColor: 'var(--mui-palette-background-paper)',
+            backgroundImage: 'var(--mui-overlays-1)', //#FFFFFF0D
             '&.Mui-disabled': {
               backgroundColor: '#B3B3B3',
-              color: 'var(--mui-palette-text-primary)',
+              color: 'var(--font-color-default)',
             },
-          },
-        },
-        {
-          props: { disabled: true, variant: 'plain' },
-          style: {
-            // backgroundColor: '#B3B3B3',
-            backgroundColor: 'red',
-            color: 'red',
-            // color: 'var(--mui-palette-text-primary)',
           },
         },
       ],

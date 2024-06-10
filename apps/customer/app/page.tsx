@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { MoneriumConnect } from "../components/MoneriumConnect/MoneriumConnect";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import s from "./page.module.scss";
+import Image from 'next/image';
+import { MoneriumConnect } from '../components/MoneriumConnect/MoneriumConnect';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import s from './page.module.scss';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           src="/monerium-logo.png"
           alt="Monerium logo"
           fill
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: 'contain' }}
           priority
         />
       </Box>

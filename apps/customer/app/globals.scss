@@ -11,7 +11,6 @@
   --font-color-light-gray-on-light: #535A5F;
   --font-color-light-gray-on-dark: #9AA1A7;
 
-
 }
 
 [data-mui-color-scheme="light"] body {
@@ -35,7 +34,7 @@
 body {
 
   font-synthesis: none;
-
+  // Typography
   .MuiContainer-root {
     display: flex;
     flex-direction: column;
@@ -60,9 +59,19 @@ body {
     text-transform: uppercase;
     color: var(--font-color-light);
   }
-  // .MuiButton-root {
-  //   border-radius: 50px;
-  // }
+  // Select
+  .MuiInputBase-root {
+    fieldset {
+      border: none;
+    }
+  }
+  .MuiSelect-select {
+    font-weight: 500;
+    background-color: var(--mui-palette-background-paper);
+    background-image: var(--mui-overlays-1);
+
+  }
+
 }
 
 

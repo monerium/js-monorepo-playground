@@ -1,54 +1,63 @@
 'use client';
 
 import { useMonerium } from '@monerium/sdk-react-provider';
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Typography from '@mui/material/Typography';
 import TotalBalance from '../../../components/Dashboard/TotalBalance';
-import ChainFilter from '../../../components/Dashboard/ChainFilter';
+import Filter from '../../../components/Dashboard/Filters';
+import { useCallback, useEffect, useState } from 'react';
+import { Account, ChainSelection } from '../../../components/Dashboard/types';
+import { Balances, Currency } from '@monerium/sdk';
+import WalletList from '../../../components/Dashboard/WalletList';
+import { flattenSortAndSumBalances } from '../../../components/Dashboard/WalletList/utils';
+import Stack from '@mui/material/Stack';
+import ChainFilter from '../../../components/Dashboard/Filters/ChainFilter';
+import CurrencyFilter from '../../../components/Dashboard/Filters/CurrencyFilter';
 
-// import { useMonerium } from "@monerium/sdk-react-provider";
-
-export default function Home() {
+function Dashboard() {
   const { balances, loadingBalances } = useMonerium();
+  const [selectedChain, setSelectedChain] = useState<ChainSelection>('all');
+  const [filteredList, setFilteredList] = useState<Account[]>();
+  const [totalBalance, setTotalBalance] = useState<number>(0.0);
+
+  const [selectedCurrency, setSelectedCurrency] = useState('eur');
 
   console.log(
-    '%c balances',
+    '%c selectedCurrency',
     'color:white; padding: 30px; background-color: darkgreen',
-    balances,
-    loadingBalances,
-    balances?.find((b) => b.balances.find((a) => a.currency === 'gbp'))
+    selectedCurrency
   );
+
+  const handleBalanceFiltering = useCallback(() => {
+    let filtered: Balances[] | null = balances;
+
+    if (!filtered) return;
+    if (selectedChain !== 'all') {
+      filtered = filtered?.filter((b) => b.chain === selectedChain);
+    }
+
+    let { list, sum } = flattenSortAndSumBalances(filtered, selectedCurrency);
+
+    setFilteredList(list);
+    setTotalBalance(sum);
+  }, [selectedChain, balances, selectedCurrency]);
+
+  useEffect(() => {
+    handleBalanceFiltering();
+  }, [selectedChain, selectedCurrency, balances]);
 
   return (
     <Box sx={{ pt: 7 }}>
-      <ChainFilter />
-      <TotalBalance />
+      <Stack direction="row" sx={{ p: 3 }}>
+        <ChainFilter selected={selectedChain} setSelected={setSelectedChain} />
+        <CurrencyFilter
+          selected={selectedCurrency}
+          setSelected={setSelectedCurrency}
+        />
+      </Stack>
+      <TotalBalance totalBalance={totalBalance} currency={selectedCurrency} />
 
-      <List>
-        {balances?.map((account, i) => (
-          <ListItemButton key={i + account.id}>
-            {/* <p>
-              Amount:{' '}
-              {account.balances.find((a) => a.currency === 'eur')?.amount}
-            </p>
-            <p>{account.chain}</p> */}
-            <ListItemAvatar>
-              <Avatar alt="Profile Picture" src={'/tokens/eur.png'} />
-            </ListItemAvatar>
-            {/* <p>{account.address}</p> */}
-            <ListItemText primary={'test'} secondary={'testing'} />
-          </ListItemButton>
-        ))}
-      </List>
-      {/* <List>
-        {messages.map(({ primary, secondary, person }, index) => (
-        ))}
-      </List> */}
+      <WalletList list={filteredList} />
     </Box>
   );
 }
+export default Dashboard;

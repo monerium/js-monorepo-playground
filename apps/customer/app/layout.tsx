@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.scss';
-import { Providers } from './providers';
+import Providers from '../components/App/Providers';
 import { cookies } from 'next/headers';
 import ThemeModeToggle from '../components/ThemeModeToggle';
 
