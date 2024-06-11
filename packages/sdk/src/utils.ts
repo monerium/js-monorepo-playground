@@ -1,33 +1,33 @@
-import { Balances, Chain, ChainId, Currency, Networks, Profile } from "./types";
+import { Balances, Chain, ChainId, Currency, Networks, Profile } from './types';
 
 export const rfc3339 = (d: Date) => {
-  if (d.toString() === "Invalid Date") {
+  if (d.toString() === 'Invalid Date') {
     throw d;
   }
   const pad = (n: number) => {
-    return n < 10 ? "0" + n : n;
+    return n < 10 ? '0' + n : n;
   };
 
   const timezoneOffset = (offset: number) => {
     if (offset === 0) {
-      return "Z";
+      return 'Z';
     }
-    const sign = offset > 0 ? "-" : "+";
+    const sign = offset > 0 ? '-' : '+';
     offset = Math.abs(offset);
-    return sign + pad(Math.floor(offset / 60)) + ":" + pad(offset % 60);
+    return sign + pad(Math.floor(offset / 60)) + ':' + pad(offset % 60);
   };
 
   return (
     d.getFullYear() +
-    "-" +
+    '-' +
     pad(d.getMonth() + 1) +
-    "-" +
+    '-' +
     pad(d.getDate()) +
-    "T" +
+    'T' +
     pad(d.getHours()) +
-    ":" +
+    ':' +
     pad(d.getMinutes()) +
-    ":" +
+    ':' +
     pad(d.getSeconds()) +
     timezoneOffset(d.getTimezoneOffset())
   );
@@ -42,9 +42,9 @@ export const placeOrderMessage = (
   amount: string | number,
   receiver: string,
   chainId?: number,
-  currency?: "eur" | "gbp" | "usd" | "isk"
+  currency?: 'eur' | 'gbp' | 'usd' | 'isk'
 ) => {
-  const curr = `${currency?.toUpperCase() || "EUR"}`;
+  const curr = `${currency?.toUpperCase() || 'EUR'}`;
 
   if (chainId) {
     return `Send ${curr} ${amount} to ${receiver} on ${getChain(
@@ -69,8 +69,8 @@ export const urlEncoded = (
           ([key, value]) =>
             `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
         )
-        .join("&")
-    : "";
+        .join('&')
+    : '';
 };
 
 /**
@@ -81,13 +81,13 @@ export const getChain = (chainId: number): Chain => {
   switch (chainId) {
     case 1:
     case 11155111:
-      return "ethereum";
+      return 'ethereum';
     case 100:
     case 10200:
-      return "gnosis";
+      return 'gnosis';
     case 137:
     case 80002:
-      return "polygon";
+      return 'polygon';
     default:
       throw new Error(`Chain not supported: ${chainId}`);
   }
@@ -103,13 +103,13 @@ export const getNetwork = (chainId: number): Networks => {
     case 1:
     case 100:
     case 137:
-      return "mainnet";
+      return 'mainnet';
     case 11155111:
-      return "sepolia";
+      return 'sepolia';
     case 10200:
-      return "chiado";
+      return 'chiado';
     case 80002:
-      return "amoy";
+      return 'amoy';
     default:
       throw new Error(`Network not supported: ${chainId}`);
   }
@@ -122,7 +122,7 @@ export const getIban = (profile: Profile, address: string, chainId: number) => {
         account.address === address &&
         account.iban &&
         account.chain === getChain(chainId)
-    )?.iban ?? ""
+    )?.iban ?? ''
   );
 };
 
@@ -132,7 +132,7 @@ export const getAmount = (
   chainId?: ChainId
   // currency?: Currency,
 ): string => {
-  if (!balances || !address || !chainId) return "0";
+  if (!balances || !address || !chainId) return '0';
   const currency = Currency.eur;
 
   const eurBalance = balances.find(
@@ -141,7 +141,7 @@ export const getAmount = (
   )?.balances;
 
   return (
-    eurBalance?.find((balance) => balance.currency === currency)?.amount || "0"
+    eurBalance?.find((balance) => balance.currency === currency)?.amount || '0'
   );
 };
 

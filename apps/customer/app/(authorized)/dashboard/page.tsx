@@ -1,14 +1,16 @@
 'use client';
 
-import Box from '@mui/material/Box';
-import TotalBalance from '../../../components/Dashboard/TotalBalance';
 import { useState } from 'react';
-import { ChainSelection } from '../../../components/Dashboard/types';
-import { Currency } from '@monerium/sdk';
-import WalletList from '../../../components/Dashboard/WalletList';
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import ChainFilter from '../../../components/Dashboard/Filters/ChainFilter';
-import TokenFilter from '../../../components/Dashboard/Filters/TokenFilter';
+
+import { Currency } from '@monerium/sdk';
+
+import ChainFilter from 'components/Dashboard/Filters/ChainFilter';
+import TokenFilter from 'components/Dashboard/Filters/TokenFilter';
+import TotalBalance from 'components/Dashboard/TotalBalance';
+import { ChainSelection } from 'components/Dashboard/types';
+import WalletList from 'components/Dashboard/WalletList';
 // import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 function Dashboard() {

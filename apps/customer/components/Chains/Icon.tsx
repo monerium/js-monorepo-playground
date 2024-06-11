@@ -1,6 +1,7 @@
 import Image from 'next/image';
+import { Chain } from '@monerium/sdk';
 
-const ChainIcon = ({ chain }) => {
+const ChainIcon = ({ chain }: { chain: Chain }) => {
   return (
     <Image
       src={`/chains/${chain}-bgfill-icon.svg`}

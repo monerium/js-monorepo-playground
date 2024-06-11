@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { MoneriumProvider } from '@monerium/sdk-react-provider';
 
-import WalletProviders from './Wallet/WalletProviders';
 import StyleProviders from './Style/StyleProviders';
+import WalletProviders from './Wallet/WalletProviders';
 
 function Providers({ children }: { children: React.ReactNode }) {
   return (

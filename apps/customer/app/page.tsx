@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import { MoneriumConnect } from '../components/MoneriumConnect/MoneriumConnect';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+
+import { MoneriumConnect } from 'components/MoneriumConnect/MoneriumConnect';
+
 import s from './page.module.scss';
 
 export default function Home() {

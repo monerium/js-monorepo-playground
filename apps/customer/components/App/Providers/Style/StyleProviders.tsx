@@ -1,9 +1,8 @@
 'use client';
 
-import * as React from 'react';
-import { AppRouterCacheProvider as MUIEmotionCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { Experimental_CssVarsProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { Experimental_CssVarsProvider } from '@mui/material/styles';
+import { AppRouterCacheProvider as MUIEmotionCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 
 import theme from './theme';
 

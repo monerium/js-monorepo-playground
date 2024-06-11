@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import AddIcon from '@mui/icons-material/Add';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import MenuIcon from '@mui/icons-material/Menu';
+import RepeatIcon from '@mui/icons-material/Repeat';
 import MUIBottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import MenuIcon from '@mui/icons-material/Menu';
-import AddIcon from '@mui/icons-material/Add';
-import RepeatIcon from '@mui/icons-material/Repeat';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Paper } from '@mui/material';
+import Paper from '@mui/material/Paper';
 
 const BottomNavigation = () => {
   const [value, setValue] = useState(0);

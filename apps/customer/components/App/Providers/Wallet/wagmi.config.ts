@@ -1,10 +1,10 @@
-import { getDefaultConfig } from '@rainbow-me/rainbowkit';
-import { Config, http } from 'wagmi';
+import { Config } from 'wagmi';
 import { mainnet, sepolia } from 'wagmi/chains';
+import { getDefaultConfig } from '@rainbow-me/rainbowkit';
 
 const config = getDefaultConfig({
   appName: 'Monerium',
-  projectId: 'YOUR_PROJECT_ID',
+  projectId: 'YOUR_PROJECT_ID', // TODO
   chains: [mainnet, sepolia],
   // transports: {
   //   [mainnet.id]: http("https://eth-mainnet.g.alchemy.com/v2/..."),

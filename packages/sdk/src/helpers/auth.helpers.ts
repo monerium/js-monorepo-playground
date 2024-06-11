@@ -1,3 +1,7 @@
+import encodeBase64Url from 'crypto-js/enc-base64url';
+import SHA256 from 'crypto-js/sha256';
+
+import { STORAGE_CODE_VERIFIER } from '../constants';
 import {
   AuthArgs,
   AuthCodeRequest,
@@ -5,11 +9,8 @@ import {
   PKCERequest,
   PKCERequestArgs,
   RefreshTokenRequest,
-} from "../types";
-import { getChain, getNetwork, urlEncoded } from "../utils";
-import encodeBase64Url from "crypto-js/enc-base64url";
-import SHA256 from "crypto-js/sha256";
-import { STORAGE_CODE_VERIFIER } from "../constants";
+} from '../types';
+import { getChain, getNetwork, urlEncoded } from '../utils';
 
 /** Structure the Auth Flow params, support for ChainId instead of chain & network */
 export const getAuthFlowParams = (
@@ -43,8 +44,8 @@ export const getAuthFlowParams = (
     ...(scope !== undefined ? { scope: scope } : {}),
     ...(state !== undefined ? { state: state } : {}),
     code_challenge: codeChallenge,
-    code_challenge_method: "S256" as PKCERequest["code_challenge_method"],
-    response_type: "code" as PKCERequest["response_type"],
+    code_challenge_method: 'S256' as PKCERequest['code_challenge_method'],
+    response_type: 'code' as PKCERequest['response_type'],
     ...autoLink,
   });
 };
@@ -56,9 +57,9 @@ export const getAuthFlowParams = (
  * https://github.com/brix/crypto-js/issues/256
  */
 export const generateRandomString = () => {
-  let result = "";
+  let result = '';
   const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
   let counter = 0;
   while (counter < 128) {
@@ -83,7 +84,7 @@ export const getAuthFlowUrlAndStoreCodeVerifier = (
   const codeVerifier = generateRandomString();
   const codeChallenge = generateCodeChallenge(codeVerifier);
 
-  localStorage.setItem(STORAGE_CODE_VERIFIER, codeVerifier || "");
+  localStorage.setItem(STORAGE_CODE_VERIFIER, codeVerifier || '');
 
   return `${baseUrl}/auth?${getAuthFlowParams(args, codeChallenge)}`;
 };
@@ -93,12 +94,12 @@ export const getAuthFlowUrlAndStoreCodeVerifier = (
  */
 export const cleanQueryString = () => {
   const url = window.location.href;
-  if (!url || !url?.includes("?")) return;
-  const [baseUrl, queryString] = url.split("?");
+  if (!url || !url?.includes('?')) return;
+  const [baseUrl, queryString] = url.split('?');
 
   // Check if there is a query string
   if (queryString) {
-    window.history.replaceState(null, "", baseUrl);
+    window.history.replaceState(null, '', baseUrl);
   }
 };
 

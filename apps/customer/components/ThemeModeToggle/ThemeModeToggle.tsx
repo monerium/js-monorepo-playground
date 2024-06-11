@@ -1,11 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useColorScheme } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
+import Cookie from 'js-cookie';
 import DarkModeOutlined from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlined from '@mui/icons-material/LightModeOutlined';
-import Cookie from 'js-cookie';
+import IconButton from '@mui/material/IconButton';
+import { useColorScheme } from '@mui/material/styles';
+import Tooltip from '@mui/material/Tooltip';
 
 export const ThemeModeToggle = () => {
   const [isMounted, setIsMounted] = useState(false);

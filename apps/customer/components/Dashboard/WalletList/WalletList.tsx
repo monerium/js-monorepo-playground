@@ -1,22 +1,24 @@
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import {
   Dispatch,
-  SetStateAction,
   memo,
+  SetStateAction,
   useCallback,
   useEffect,
   useState,
 } from 'react';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import Avatar from '@mui/material/Avatar';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import { ListItemText } from '@mui/material';
-import { Account, ChainSelection } from '../types';
-import { useMonerium } from '@monerium/sdk-react-provider';
+import Avatar from '@mui/material/Avatar';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import List from '@mui/material/List';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemButton from '@mui/material/ListItemButton';
+import Typography from '@mui/material/Typography';
+
 import { Balances, Currency } from '@monerium/sdk';
+import { useMonerium } from '@monerium/sdk-react-provider';
+
+import { Account, ChainSelection } from '../types';
 import { flattenSortAndSumBalances } from './utils';
 
 const WalletList = memo(

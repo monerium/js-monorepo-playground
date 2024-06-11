@@ -1,4 +1,5 @@
 import { Balances } from '@monerium/sdk';
+
 import { Account } from '../types';
 
 export function flattenSortAndSumBalances(

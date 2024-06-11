@@ -1,9 +1,10 @@
-import { Dispatch, SetStateAction, memo } from 'react';
-import Select from '@mui/material/Select';
+import { Dispatch, memo, SetStateAction } from 'react';
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 import { Currency } from '@monerium/sdk';
-import TokenIcon from '../../Tokens/Icon';
+import TokenIcon from 'src/components/Tokens/Icon';
+
 import s from './TokenFilter.module.scss';
 
 const TokenFilter = memo(

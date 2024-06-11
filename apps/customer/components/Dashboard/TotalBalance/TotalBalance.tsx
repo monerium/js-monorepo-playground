@@ -1,7 +1,7 @@
-import Typography from '@mui/material/Typography';
+import { memo } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import { memo } from 'react';
+import Typography from '@mui/material/Typography';
 import { Currency } from '@monerium/sdk';
 
 function amountFormat(amount: number, currencyCode: Currency) {

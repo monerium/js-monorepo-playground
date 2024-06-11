@@ -1,14 +1,24 @@
-import { mapChainAndNetwork, urlEncoded } from './utils';
 import { MONERIUM_CONFIG } from './config';
+import { STORAGE_CODE_VERIFIER, STORAGE_REFRESH_TOKEN } from './constants';
+import {
+  cleanQueryString,
+  getAuthFlowUrlAndStoreCodeVerifier,
+  isAuthCode,
+  isClientCredentials,
+  isRefreshToken,
+  rest,
+} from './helpers';
 import type {
   AuthArgs,
-  AuthorizationCodeCredentials,
   AuthCodeRequest,
   AuthContext,
+  AuthFlowOptions,
+  AuthorizationCodeCredentials,
   Balances,
   BearerProfile,
   BearerTokenCredentials,
   ClassOptions,
+  ClientCredentials,
   ClientCredentialsRequest,
   ENV,
   Environment,
@@ -16,7 +26,6 @@ import type {
   MoneriumEvent,
   MoneriumEventListener,
   NewOrder,
-  AuthFlowOptions,
   Order,
   OrderFilter,
   OrderNotification,
@@ -26,18 +35,8 @@ import type {
   RefreshTokenRequest,
   SupportingDoc,
   Token,
-  ClientCredentials,
 } from './types';
-import { STORAGE_CODE_VERIFIER, STORAGE_REFRESH_TOKEN } from './constants';
-
-import {
-  cleanQueryString,
-  getAuthFlowUrlAndStoreCodeVerifier,
-  isAuthCode,
-  isClientCredentials,
-  isRefreshToken,
-  rest,
-} from './helpers';
+import { mapChainAndNetwork, urlEncoded } from './utils';
 
 // import pjson from "../package.json";
 

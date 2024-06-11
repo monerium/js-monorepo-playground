@@ -1,8 +1,9 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { MoneriumProvider } from './provider';
+import { render, screen, waitFor } from '@testing-library/react';
+
 import { useMonerium } from './hook';
+import { MoneriumProvider } from './provider';
 
 jest.mock('@monerium/sdk', () => {
   const mockMoneriumClient = {

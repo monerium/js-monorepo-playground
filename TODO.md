@@ -9,7 +9,8 @@ Add auto arrange imports
 
 # Customer
 
-- ?
+- Add stylelint
+- Add auto arrange imports
 
 # SDK
 
@@ -26,9 +27,9 @@ Add auto arrange imports
 
 # SDK React Provider
 
+- activate tests!!!
 - activate linter
   https://turbo.build/repo/docs/guides/tools/eslint
-- activate tests
 
 - Today we do a fetch for everything as soon as we know the user is authenticated. This is not ideal, it gives the user no control over what is fetched and when. We should change this so that we only fetch what is absolutely necessary and let the user decide when to fetch the rest.
   Add storybook package.

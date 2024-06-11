@@ -1,7 +1,8 @@
-import { Dispatch, SetStateAction, memo } from 'react';
+import { Dispatch, memo, SetStateAction } from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import ChainIcon from '../../Chains/Icon';
+
+import ChainIcon from 'components/Chains/Icon';
 import { ChainSelection } from '../types';
 
 const ChainFilter = memo(

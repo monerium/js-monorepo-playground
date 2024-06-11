@@ -1,4 +1,5 @@
-import { createContext } from "react";
+import { createContext } from 'react';
+
 import {
   Profile,
   Balances,
@@ -6,7 +7,7 @@ import {
   Order,
   NewOrder,
   Token,
-} from "@monerium/sdk";
+} from '@monerium/sdk';
 
 export interface MoneriumContextValue {
   authorize: () => Promise<void>;

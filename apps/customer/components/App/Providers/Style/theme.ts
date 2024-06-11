@@ -1,4 +1,5 @@
 'use client';
+
 import { experimental_extendTheme } from '@mui/material/styles';
 
 // Creating new component variants, like <Button variant="rounded" />

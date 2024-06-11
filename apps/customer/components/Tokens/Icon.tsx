@@ -1,5 +1,6 @@
-import { Currency } from '@monerium/sdk';
 import Image from 'next/image';
+
+import { Currency } from '@monerium/sdk';
 
 const TokenIcon = ({
   currency,

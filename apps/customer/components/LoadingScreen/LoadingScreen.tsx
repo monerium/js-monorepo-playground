@@ -1,11 +1,12 @@
-import Box from '@mui/material/Box';
-import LinearProgress from '@mui/material/LinearProgress';
-import s from './LoadingScreen.module.scss';
-import { useTransition } from 'react-transition-state';
-import cx from 'classnames';
-import Image from 'next/image';
 import { useEffect } from 'react';
+import Image from 'next/image';
+import cx from 'classnames';
+import { useTransition } from 'react-transition-state';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import LinearProgress from '@mui/material/LinearProgress';
+
+import s from './LoadingScreen.module.scss';
 
 export const LoadingScreen = () => {
   const [{ status }, toggle] = useTransition({

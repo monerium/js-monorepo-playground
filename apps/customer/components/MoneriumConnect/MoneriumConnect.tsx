@@ -1,12 +1,13 @@
-"use client";
-import React from "react";
-import { useMonerium } from "@monerium/sdk-react-provider";
-import Button from "@mui/material/Button";
-import Image from "next/image";
-import s from "./MoneriumConnect.module.scss";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import Button from '@mui/material/Button';
+
+import { useMonerium } from '@monerium/sdk-react-provider';
+
+import s from './MoneriumConnect.module.scss';
 export const MoneriumConnect = () => {
-  const { authorize, isAuthorized, profile, balances, tokens, orders } =
-    useMonerium();
+  const { authorize } = useMonerium();
 
   return (
     <div className={s.wrapper}>
