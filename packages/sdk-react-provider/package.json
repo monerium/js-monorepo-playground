@@ -20,7 +20,7 @@
     "directory": "libs/sdk-react-provider"
   },
   "dependencies": {
-    "@monerium/sdk": "workspace:*",
+    "@monerium/sdk": "*",
     "@types/react": "^18.2.61",
     "react": "^18.2.0"
   },

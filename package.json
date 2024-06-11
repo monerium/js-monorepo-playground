@@ -8,15 +8,19 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "jest": "^29.7.0",
     "jest-fetch-mock": "^3.0.3",
     "prettier": "^3.2.5",
     "tsup": "^8.1.0",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "npm@9.6.7",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "engines": {
     "node": ">=18"
   }

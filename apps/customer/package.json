@@ -17,7 +17,7 @@
     "@mui/material-nextjs": "^5.15.11",
     "@mui/system": "^5.15.15",
     "@rainbow-me/rainbowkit": "^2.1.2",
-    "@repo/ui": "workspace:*",
+    "@repo/ui": "*",
     "@tanstack/react-query": "^5.40.1",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-f994737d14-20240522",
@@ -26,10 +26,10 @@
     "wagmi": "^2.9.8"
   },
   "devDependencies": {
-    "@monerium/sdk": "workspace:*",
-    "@monerium/sdk-react-provider": "workspace:*",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@monerium/sdk": "*",
+    "@monerium/sdk-react-provider": "*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
