@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import { act, render, screen, waitFor } from '@testing-library/react';
-import jest from 'jest';
+import { screen } from '@testing-library/dom';
+import { act, render, waitFor } from '@testing-library/react';
 
 import { useMonerium } from './hook';
 import { MoneriumProvider } from './provider';

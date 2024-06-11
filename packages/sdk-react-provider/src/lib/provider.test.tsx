@@ -1,11 +1,11 @@
-import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen, waitFor } from '@testing-library/react';
+import { screen } from '@testing-library/dom';
+import { render, waitFor } from '@testing-library/react';
 
 import { useMonerium } from './hook';
 import { MoneriumProvider } from './provider';
 
-jest.mock('@monerium/sdk', () => {
+jest.mock('../../../sdk/dist', () => {
   const mockMoneriumClient = {
     authorize: jest.fn().mockResolvedValue(true),
     getAccess: jest.fn().mockResolvedValue(true),
