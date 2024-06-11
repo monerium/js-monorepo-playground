@@ -36,7 +36,7 @@ import type {
   SupportingDoc,
   Token,
 } from './types';
-import { mapChainAndNetwork, urlEncoded } from './utils';
+import { mapChainIdToChain, urlEncoded } from './utils';
 
 // import pjson from "../package.json";
 
@@ -302,8 +302,8 @@ export class MoneriumClient {
    * {@link https://monerium.dev/api-docs#operation/profile-addresses}
    */
   linkAddress(profileId: string, body: LinkAddress) {
-    body = mapChainAndNetwork(body);
-    body.accounts = body.accounts.map((account) => mapChainAndNetwork(account));
+    body = mapChainIdToChain(body);
+    body.accounts = body.accounts.map((account) => mapChainIdToChain(account));
 
     return this.#api(
       'post',
@@ -319,10 +319,10 @@ export class MoneriumClient {
     const body = {
       kind: 'redeem',
       currency: 'eur',
-      ...mapChainAndNetwork(order),
+      ...mapChainIdToChain(order),
       counterpart: {
         ...order.counterpart,
-        identifier: mapChainAndNetwork(order.counterpart.identifier),
+        identifier: mapChainIdToChain(order.counterpart.identifier),
       },
     };
 

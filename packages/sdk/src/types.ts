@@ -249,7 +249,7 @@ export interface Account {
   iban?: string;
   // sortCode?: string;
   // accountNumber?: string;
-  network: Network;
+  network?: Network;
   chain: Chain;
   id?: string;
   state?: AccountState;
