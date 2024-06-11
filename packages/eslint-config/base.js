@@ -1,6 +1,10 @@
 /** @type {import("eslint").Linter.Config} */
 
 module.exports = {
+  env: {
+    jest: true,
+  },
+  extends: ['plugin:jest/recommended'],
   plugins: ['simple-import-sort'],
   rules: {
     'simple-import-sort/imports': [

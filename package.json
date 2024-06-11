@@ -5,22 +5,22 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "rm -rf apps/customer/.next packages/sdk-react-provider/dist packages/sdk/dist",
+    "clean:npm": "rm -rf node_modules pnpm-lock.yaml packages/sdk-react-provider/node_modules apps/customer/node_modules"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "jest": "^29.7.0",
-    "jest-fetch-mock": "^3.0.3",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "prettier": "^3.2.5",
     "tsup": "^8.1.0",
     "turbo": "latest"
   },
-  "packageManager": "npm@9.6.7",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
   }

@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import { screen } from '@testing-library/dom';
-import { act, render, waitFor } from '@testing-library/react';
+// eslint-disable-next-line no-redeclare
+import { act, render, screen, waitFor } from '@testing-library/react';
 
 import { useMonerium } from './hook';
 import { MoneriumProvider } from './provider';
@@ -68,17 +68,28 @@ describe('useMonerium', () => {
           orders: [],
           tokens: [],
           error: null,
+          loadingAuth: false,
         })
       )
     );
   });
 
-  test('throws an error when used outside a MoneriumProvider', () => {
+  test('throws an error when used outside a MoneriumProvider', async () => {
     // Suppress console error for this test
     const consoleError = console.error;
     console.error = jest.fn();
 
-    expect(() => render(<TestConsumerComponent />)).toThrow(
+    let error = null;
+    try {
+      await act(async () => {
+        render(<TestConsumerComponent />);
+      });
+    } catch (e) {
+      error = e;
+    }
+
+    expect(error).toBeDefined();
+    expect((error as Error)?.message).toMatch(
       'useMonerium must be used within a MoneriumProvider'
     );
 

@@ -5,12 +5,9 @@ Add precondition hooks - husky.
 Add CI/CD - github actions
 https://turbo.build/repo/docs/guides/ci-vendors/github-actions
 
-Add auto arrange imports
-
 # Customer
 
 - Add stylelint
-- Add auto arrange imports
 
 # SDK
 
