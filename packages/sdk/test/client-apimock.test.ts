@@ -6,7 +6,7 @@ import 'jest-localstorage-mock';
 import fetchMock from 'jest-fetch-mock';
 
 import { constants, MoneriumClient } from '../src/index';
-import { Currency, PaymentStandard } from '../src/types';
+import { Currency, NewOrder, PaymentStandard } from '../src/types';
 import { OWNER_SIGNATURE, PUBLIC_KEY } from './constants';
 
 const message = constants.LINK_MESSAGE;
@@ -135,28 +135,26 @@ describe('MoneriumClient', () => {
       '0x23bf7e1b240d238b13cb293673c3419915402bb34435af62850b1d8e63f82c564fb73ab19691cf248594423dd01e441bb2ccb38ce2e2ecc514dfc3075bea829e1c';
 
     await client
-      .placeOrder(
-        {
-          amount: '10',
-          signature: placeOrderSignatureHash,
-          address: PUBLIC_KEY,
-          counterpart: {
-            identifier: {
-              standard: PaymentStandard.chain,
-              address: '0x1234567890123456789012345678901234567890',
-              chainId: 11155111,
-            },
-            details: {
-              firstName: 'Mockbank',
-              lastName: 'Testerson',
-            },
+      .placeOrder({
+        amount: '10',
+        signature: placeOrderSignatureHash,
+        address: PUBLIC_KEY,
+        counterpart: {
+          identifier: {
+            standard: PaymentStandard.chain,
+            address: '0x1234567890123456789012345678901234567890',
+            chainId: 11155111,
           },
-          message: placeOrderMessage,
-          memo: 'Powered by Monerium SDK',
-          chain: 'ethereum',
-          network: 'sepolia',
-        } as any /** to bypass type error for chain and network, for backwards compatibility */
-      )
+          details: {
+            firstName: 'Mockbank',
+            lastName: 'Testerson',
+          },
+        },
+        message: placeOrderMessage,
+        memo: 'Powered by Monerium SDK',
+        chain: 'ethereum',
+        network: 'sepolia',
+      } as NewOrder)
       .catch(() => ({}));
 
     expect(fetchMock?.mock?.calls?.[0]?.[0]).toEqual(
@@ -190,7 +188,7 @@ describe('MoneriumClient', () => {
       })
     );
   });
-  test('place cross chain order with chainId', async () => {
+  test('place cross chain order with incorrect chainId', async () => {
     const date = 'Thu, 29 Dec 2022 14:58 +00:00';
     const placeOrderMessage = `Send EUR 10 to GR1601101250000000012300695 at ${date}`;
     const placeOrderSignatureHash =
@@ -198,27 +196,25 @@ describe('MoneriumClient', () => {
 
     await expect(
       Promise.resolve().then(() =>
-        client.placeOrder(
-          {
-            amount: '10',
-            signature: placeOrderSignatureHash,
-            address: PUBLIC_KEY,
-            counterpart: {
-              identifier: {
-                standard: PaymentStandard.chain,
-                address: '0x1234567890123456789012345678901234567890',
-                chainId: 7,
-              },
-              details: {
-                firstName: 'Mockbank',
-                lastName: 'Testerson',
-              },
+        client.placeOrder({
+          amount: '10',
+          signature: placeOrderSignatureHash,
+          address: PUBLIC_KEY,
+          counterpart: {
+            identifier: {
+              standard: PaymentStandard.chain,
+              address: '0x1234567890123456789012345678901234567890',
+              chainId: 7,
             },
-            message: placeOrderMessage,
-            memo: 'Powered by Monerium SDK',
-            chain: 'ethereum',
-          } as any /** to bypass typeerror for chain and network */
-        )
+            details: {
+              firstName: 'Mockbank',
+              lastName: 'Testerson',
+            },
+          },
+          message: placeOrderMessage,
+          memo: 'Powered by Monerium SDK',
+          chain: 'ethereum',
+        } as NewOrder)
       )
     ).rejects.toThrow('Chain not supported: 7');
   });

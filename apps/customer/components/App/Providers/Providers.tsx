@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+
 import { MoneriumProvider } from '@monerium/sdk-react-provider';
 
 import StyleProviders from './Style/StyleProviders';

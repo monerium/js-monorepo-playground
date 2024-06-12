@@ -145,7 +145,10 @@ export const getAmount = (
   );
 };
 
-export const mapChainIdToChain = (body: any) => {
+export const mapChainIdToChain = (body: {
+  chainId?: number;
+  [key: string]: unknown;
+}) => {
   if (body?.chainId) {
     const { chainId, ...rest } = body;
     return {

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup --dts",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "test": "jest",
     "test:watch": "jest --watch"
   },

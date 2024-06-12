@@ -1,11 +1,11 @@
 import { createContext } from 'react';
 
 import {
-  Profile,
   Balances,
   LinkAddress,
-  Order,
   NewOrder,
+  Order,
+  Profile,
   Token,
 } from '@monerium/sdk';
 

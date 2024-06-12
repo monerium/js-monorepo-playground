@@ -2,10 +2,11 @@
  * @jest-environment jsdom
  */
 import 'jest-localstorage-mock';
+
 import { STORAGE_CODE_VERIFIER } from '../src/constants';
 import {
-  getAuthFlowUrlAndStoreCodeVerifier,
   generateCodeChallenge,
+  getAuthFlowUrlAndStoreCodeVerifier,
 } from '../src/helpers/auth.helpers';
 
 describe('getAuthFlowUrlAndStoreCodeVerifier', () => {

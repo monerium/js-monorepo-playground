@@ -13,6 +13,7 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "lint:style": {},
     "test": {},
     "test:watch": {
       "cache": false,

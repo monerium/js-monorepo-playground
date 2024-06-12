@@ -10,7 +10,7 @@ import {
   PKCERequestArgs,
   RefreshTokenRequest,
 } from '../types';
-import { getChain, getNetwork, urlEncoded } from '../utils';
+import { getChain, urlEncoded } from '../utils';
 
 /** Structure the Auth Flow params, support for ChainId instead of chain & network */
 export const getAuthFlowParams = (

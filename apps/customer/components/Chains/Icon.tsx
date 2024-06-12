@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import { Chain } from '@monerium/sdk';
 
 const ChainIcon = ({ chain }: { chain: Chain }) => {

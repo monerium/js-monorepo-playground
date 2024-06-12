@@ -2,7 +2,7 @@ export const rest = async <T>(
   url: string,
   method: string,
   body?: BodyInit | Record<string, string>,
-  headers?: Record<string, string>,
+  headers?: Record<string, string>
 ): Promise<T> => {
   const res = await fetch(`${url}`, {
     method,

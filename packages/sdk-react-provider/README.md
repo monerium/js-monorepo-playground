@@ -16,7 +16,11 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <MoneriumProvider clientId="f99e629b-6dca-11ee-8aa6-5273f65ed05b" redirectUrl="https://pntvgs.csb.app/" environment="sandbox">
+    <MoneriumProvider
+      clientId="f99e629b-6dca-11ee-8aa6-5273f65ed05b"
+      redirectUrl="https://pntvgs.csb.app/"
+      environment="sandbox"
+    >
       <App />
     </MoneriumProvider>
   </StrictMode>
@@ -29,7 +33,8 @@ Use the hook to access the Monerium SDK.
 import { useMonerium } from '@monerium/sdk-react-provider';
 
 export default function App() {
-  const { authorize, isAuthorized, profile, balances, tokens, orders } = useMonerium();
+  const { authorize, isAuthorized, profile, balances, tokens, orders } =
+    useMonerium();
   return (
     <div className="App">
       {!isAuthorized && <button onClick={authorize}>Authorize</button>}

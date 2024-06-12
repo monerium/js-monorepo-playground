@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+// eslint-disable-next-line no-redeclare
 import { screen } from '@testing-library/dom';
 import { render, waitFor } from '@testing-library/react';
 

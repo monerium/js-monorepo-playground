@@ -1,4 +1,4 @@
 declare module 'jest-fetch-mock' {
-  const fetchMock: any;
+  const fetchMock: unknown;
   export default fetchMock;
 }

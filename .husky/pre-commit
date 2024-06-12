@@ -1,1 +1,1 @@
-turbo dev
+turbo lint & turbo lint:style

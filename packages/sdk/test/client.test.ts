@@ -8,7 +8,6 @@
 // punkWallet: https://punkwallet.io/pk#0x30fa9f64fb85dab6b4bf045443e08315d6570d4eabce7c1363acda96042a6e1a
 
 import 'jest-localstorage-mock';
-import { before } from 'node:test';
 
 import {
   LINK_MESSAGE,
@@ -17,7 +16,12 @@ import {
 } from '../src/constants';
 import { generateCodeChallenge } from '../src/helpers';
 import { MoneriumClient } from '../src/index';
-import { Currency, Order, PaymentStandard } from '../src/types';
+import {
+  Currency,
+  CurrencyAccounts,
+  Order,
+  PaymentStandard,
+} from '../src/types';
 import { rfc3339 } from '../src/utils';
 import { getChain, getNetwork } from '../src/utils';
 import {
@@ -100,26 +104,6 @@ describe('MoneriumClient', () => {
     );
     assignMock.mockRestore();
   });
-
-  // This is no longer valid, we were calling connect on the constructor, but there was no way to wait for the promise to resolve
-  // test('class instance with refresh_token', async () => {
-  //   const connectMock = jest
-  //     .spyOn(MoneriumClient.prototype, 'connect')
-  //     .mockImplementation();
-  //   const client = new MoneriumClient({
-  //     env: 'production',
-  //     clientId: 'testClientId',
-  //     clientSecret: 'testSecret',
-  //   });
-
-  //   expect(connectMock).toHaveBeenCalled();
-  //   expect(client.getEnvironment()).toEqual({
-  //     api: 'https://api.monerium.app',
-  //     web: 'https://monerium.app',
-  //     wss: 'wss://api.monerium.app',
-  //   });
-  //   connectMock.mockRestore();
-  // });
 
   test('authenticate with client credentials', async () => {
     const client = new MoneriumClient();
@@ -216,7 +200,7 @@ describe('MoneriumClient', () => {
           network: 'amoy',
           currency: Currency.eur,
         },
-      ] as any /** to bypass typeerror to test backwards compatibility */,
+      ] as CurrencyAccounts[] /** to bypass typeerror to test backwards compatibility */,
     });
 
     expect(res).toMatchObject({
@@ -269,6 +253,7 @@ describe('MoneriumClient', () => {
     );
   }, 15000);
 
+  // TODO fix, previous orders were purged from the database
   test.skip('get orders', async () => {
     const client = new MoneriumClient();
 
@@ -304,6 +289,7 @@ describe('MoneriumClient', () => {
     });
   });
 
+  // TODO fix, previous orders were purged from the database
   test.skip('get order', async () => {
     const client = new MoneriumClient();
 
@@ -391,7 +377,7 @@ describe('MoneriumClient', () => {
         redirectUrl: APP_ONE_REDIRECT_URL,
       });
     } catch (err) {
-      expect((err as any).message).toBe('Unable to load refresh token info');
+      expect((err as Error).message).toBe('Unable to load refresh token info');
     }
 
     expect(getItemSpy).toHaveBeenCalledWith(STORAGE_REFRESH_TOKEN);
@@ -489,6 +475,7 @@ describe('MoneriumClient', () => {
   });
 });
 
+// TODO:
 // test("upload supporting document", async () => {
 //   const client = new MoneriumClient();
 

@@ -15,7 +15,6 @@ import {
   getAmount,
   getChain,
   getIban,
-  getNetwork,
   mapChainIdToChain,
   placeOrderMessage,
   rfc3339,

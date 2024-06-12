@@ -1,1 +1,1 @@
-export * from "./MoneriumConnect";
+export * from './MoneriumConnect';
