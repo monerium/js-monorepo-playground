@@ -1,1 +1,1 @@
-turbo lint & turbo lint:style
+pnpm lint-staged

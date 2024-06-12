@@ -4,13 +4,9 @@
       "mode": "auto"
     }
   ],
-  "cSpell.words": [
-    "Monerium",
-    "sepolia",
-    "stylelint"
-  ],
+  "cSpell.words": ["Monerium", "sepolia", "stylelint"],
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "explicit"
   },
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "scss", ".module.scss"]
 }
