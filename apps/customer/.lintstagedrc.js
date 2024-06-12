@@ -8,5 +8,5 @@ const buildNextEslintCommand = (filenames) =>
 module.exports = {
   '*.{ts,tsx}': [buildNextEslintCommand],
   '*.{json,md}': ['prettier --write'],
-  '*.{css,scss,sass}': ['turbo lint:style'],
+  '*.{css,scss,sass}': ['pnpm lint:style'],
 };
