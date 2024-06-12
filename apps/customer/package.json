@@ -6,7 +6,8 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:style": "stylelint --fix '**/*.{css,scss}'"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -29,6 +30,8 @@
     "@monerium/sdk": "workspace:*",
     "@monerium/sdk-react-provider": "workspace:*",
     "@repo/eslint-config": "workspace:*",
+    "@repo/postcss-config": "workspace:*",
+    "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
@@ -40,13 +43,10 @@
     "eslint-config-next": "15.0.0-rc.0",
     "js-cookie": "^3.0.5",
     "postcss": "^8",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^9.5.14",
     "react-transition-state": "^2.1.1",
     "rfs": "^10.0.0",
     "sass": "^1.77.4",
-    "tailwindcss": "^3.4.1",
+    "stylelint": "^16.6.1",
     "typescript": "^5"
   }
 }

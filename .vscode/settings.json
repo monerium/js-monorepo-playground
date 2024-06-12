@@ -6,6 +6,11 @@
   ],
   "cSpell.words": [
     "Monerium",
-    "sepolia"
-  ]
+    "sepolia",
+    "stylelint"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  },
+  "stylelint.validate": ["css", "scss"]
 }

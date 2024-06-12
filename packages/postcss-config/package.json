@@ -1,0 +1,13 @@
+{
+  "name": "@repo/postcss-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.js"
+  ],
+  "devDependencies": {
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^9.5.14"
+  }
+}
