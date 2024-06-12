@@ -1,8 +1,8 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
-
 import Paper from '@mui/material/Paper';
+
 import { useMonerium } from '@monerium/sdk-react-provider';
 
 import { LoadingScreen } from 'components/LoadingScreen';
