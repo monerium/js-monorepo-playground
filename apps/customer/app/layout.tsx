@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { cookies } from 'next/headers';
 
-import Providers from 'components/App/Providers';
 import ThemeModeToggle from 'components/ThemeModeToggle';
+import Providers from 'components/App/Providers';
 
 import '@rainbow-me/rainbowkit/styles.css';
 import './globals.scss';
+
+console.log('lol')
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
