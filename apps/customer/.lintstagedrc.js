@@ -1,7 +1,7 @@
 const path = require('path');
 
 const buildEslintCommand = (filenames) =>
-  `pnpm next lint --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(' --file ')} --`;
+  `pnpm next lint --fix --dir ${process.cwd()} --file ${filenames.map((f) => path.relative(f)).join(' --file ')} --`;
 
 module.exports = {
   '*.{js,jsx,ts,tsx}': [buildEslintCommand, 'git add --force'],
