@@ -1,11 +1,17 @@
 import Image from 'next/image';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 import { MoneriumConnect } from 'components/MoneriumConnect/MoneriumConnect';
 
 import s from './page.module.scss';
+
+console.log(
+  '%c s',
+  'color:white; padding: 30px; background-color: darkgreen',
+  s
+);
 
 export default function Home() {
   return (
