@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Box from '@mui/material/Box';
+import { Paper } from '@mui/material';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
@@ -10,6 +11,7 @@ import s from './page.module.scss';
 export default function Home() {
   return (
     <Container component="main" maxWidth="md">
+      <Paper></Paper>
       <Box className={s.logoWrapper}>
         <Image
           className={s.logo}
