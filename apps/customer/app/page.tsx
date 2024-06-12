@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
 import { MoneriumConnect } from 'components/MoneriumConnect/MoneriumConnect';
 
