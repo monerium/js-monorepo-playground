@@ -40,6 +40,8 @@ import { mapChainIdToChain, urlEncoded } from './utils';
 
 // import pjson from "../package.json";
 
+console.log('test')
+
 const isServer = typeof window === 'undefined';
 
 export class MoneriumClient {
