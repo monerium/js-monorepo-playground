@@ -6,16 +6,13 @@ import Typography from '@mui/material/Typography';
 import { MoneriumConnect } from 'components/MoneriumConnect/MoneriumConnect';
 
 import s from './page.module.scss';
+import Paper from '@mui/material/Paper';
 
-console.log(
-  '%c s',
-  'color:white; padding: 30px; background-color: darkgreen',
-  s
-);
 
 export default function Home() {
   return (
     <Container component="main" maxWidth="md">
+      <Paper></Paper>
       <Box className={s.logoWrapper}>
         <Image
           className={s.logo}
