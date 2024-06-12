@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
