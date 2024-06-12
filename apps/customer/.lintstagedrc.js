@@ -6,7 +6,7 @@ const buildNextEslintCommand = (filenames) =>
     .join(' --file ')}`;
 
 module.exports = {
-  '*.{js,jsx,ts,tsx}': [buildNextEslintCommand, 'turbo format'],
-  '*.{json,md}': ['turbo format'],
+  '*.{ts,tsx}': [buildNextEslintCommand],
+  '*.{json,md}': ['prettier --write'],
   '*.{css,scss,sass}': ['turbo lint:style'],
 };
