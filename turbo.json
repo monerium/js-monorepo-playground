@@ -15,8 +15,11 @@
     "prepublish": {
       "dependsOn": ["^build"]
     },
-    "test": {},
+    "test": {
+      "dependsOn": ["^build"]
+    },
     "test:watch": {
+      "dependsOn": ["^build"],
       "cache": false,
       "persistent": true
     }

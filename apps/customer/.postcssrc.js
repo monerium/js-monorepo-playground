@@ -1,8 +1,9 @@
 /** @type {import('postcss-load-config').Config} */
 
 const rfs = require('rfs');
+const base = require('@repo/postcss-config/base.js');
 
 module.exports = {
-  extends: ['@repo/postcss-config/base.js'],
-  plugins: [rfs({})],
+  ...base,
+  plugins: [...base.plugins, 'rfs'],
 };
