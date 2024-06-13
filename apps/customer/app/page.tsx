@@ -1,14 +1,12 @@
 import Image from 'next/image';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
-import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography';
 
 import { MoneriumConnect } from 'components/MoneriumConnect/MoneriumConnect';
 
 import s from './page.module.scss';
-
-const lol = 'test';
 
 export default function Home() {
   return (
