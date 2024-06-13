@@ -171,7 +171,7 @@ export type PKCERequest = {
 
 // -- authContext
 
-enum Method {
+export enum Method {
   password = 'password',
   resource = 'resource',
   jwt = 'jwt',
