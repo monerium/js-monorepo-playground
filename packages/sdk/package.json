@@ -2,6 +2,14 @@
   "name": "@monerium/sdk",
   "version": "2.12.1",
   "description": "Essential tools to interact with the Monerium API, an electronic money issuer.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monerium/js-monorepo.git",
+    "directory": "packages/sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/monerium/js-monorepo/issues"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -18,9 +26,8 @@
     "dist/index.d.ts"
   ],
   "scripts": {
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch --onSuccess 'pnpm type-map'",
-    "build": "tsup --splitting",
-    "build:test": "tsup",
+    "dev": "tsup --watch --onSuccess 'pnpm type-map'",
+    "build": "tsup",
     "type-map": "tsc --emitDeclarationOnly --declaration",
     "lint": "eslint . --fix",
     "pub:pre": "pnpm publish --no-git-checks --dry-run",
@@ -31,12 +38,13 @@
     "crypto-js": "^4.2.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
     "@types/crypto-js": "^4.2.2",
     "jest-fetch-mock": "^3.0.3",
     "jest-localstorage-mock": "^2.4.26",
     "timezone-mock": "^1.3.6",
     "typescript": "latest"
+  },
+  "engines": {
+    "node": ">= 16.15"
   }
 }
