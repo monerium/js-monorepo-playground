@@ -1,7 +1,7 @@
 import encodeBase64Url from 'crypto-js/enc-base64url';
 import SHA256 from 'crypto-js/sha256';
 
-import { STORAGE_CODE_VERIFIER } from '../constants';
+import constants from '../constants';
 import {
   AuthArgs,
   AuthCodeRequest,
@@ -84,7 +84,7 @@ export const getAuthFlowUrlAndStoreCodeVerifier = (
   const codeVerifier = generateRandomString();
   const codeChallenge = generateCodeChallenge(codeVerifier);
 
-  localStorage.setItem(STORAGE_CODE_VERIFIER, codeVerifier || '');
+  localStorage.setItem(constants.STORAGE_CODE_VERIFIER, codeVerifier || '');
 
   return `${baseUrl}/auth?${getAuthFlowParams(args, codeChallenge)}`;
 };

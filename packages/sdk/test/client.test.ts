@@ -9,11 +9,7 @@
 
 import 'jest-localstorage-mock';
 
-import {
-  LINK_MESSAGE,
-  STORAGE_CODE_VERIFIER,
-  STORAGE_REFRESH_TOKEN,
-} from '../src/constants';
+import constants from '../src/constants';
 import { generateCodeChallenge } from '../src/helpers';
 import { MoneriumClient } from '../src/index';
 import {
@@ -34,6 +30,9 @@ import {
   OWNER_SIGNATURE,
   PUBLIC_KEY,
 } from './constants';
+
+const { LINK_MESSAGE, STORAGE_CODE_VERIFIER, STORAGE_REFRESH_TOKEN } =
+  constants;
 
 const message = LINK_MESSAGE;
 

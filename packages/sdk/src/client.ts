@@ -1,5 +1,5 @@
 import { MONERIUM_CONFIG } from './config';
-import { STORAGE_CODE_VERIFIER, STORAGE_REFRESH_TOKEN } from './constants';
+import constants from './constants';
 import {
   cleanQueryString,
   getAuthFlowUrlAndStoreCodeVerifier,
@@ -39,6 +39,7 @@ import type {
 import { mapChainIdToChain, urlEncoded } from './utils';
 
 // import pjson from "../package.json";
+const { STORAGE_CODE_VERIFIER, STORAGE_REFRESH_TOKEN } = constants;
 
 const isServer = typeof window === 'undefined';
 
@@ -47,29 +48,43 @@ export class MoneriumClient {
 
   #authorizationHeader?: string;
   /**
-   * @deprecated, use localStorage, will be removed in v3
    * The PKCE code verifier
+   * @deprecated, use localStorage, will be removed in v3
+   * @hidden
    * */
   codeVerifier?: string;
-  /** The bearer profile will be available after authentication, it includes the access_token and refresh_token */
+  /**
+   * The bearer profile will be available after authentication, it includes the `access_token` and `refresh_token`
+   * */
   bearerProfile?: BearerProfile;
-  /** The socket will be available after subscribing to an event */
+  /**
+   * The socket will be available after subscribing to an event
+   * */
   #socket?: WebSocket;
   /** The subscriptions map will be available after subscribing to an event */
   #subscriptions: Map<OrderState, MoneriumEventListener> = new Map();
-  // TODO: need this?
+
   isAuthorized = !!this.bearerProfile;
 
   #client?: BearerTokenCredentials;
-
+  /**
+   * The state parameter is used to maintain state between the request and the callback.
+   * */
   state: string | undefined;
 
-  /** Constructor for no arguments, defaults to sandbox */
-  constructor();
-  /** Constructor with only env as an argument*/
-  constructor(env: ENV);
-  /** Constructor with {@link ClassOptions} */
-  constructor(options: ClassOptions);
+  /**
+   * @defaultValue `sandbox`
+   * @example
+   * new MoneriumClient() // defaults to `sandbox`
+   *
+   * new MoneriumClient('production')
+   *
+   * new MoneriumClient({
+   *  environment: 'sandbox',
+   *  clientId: 'your-client-id',
+   *  redirectUrl: 'your-redirect-url'
+   * })
+   * */
   constructor(envOrOptions?: ENV | ClassOptions) {
     // No arguments, default to sandbox
     if (!envOrOptions) {
@@ -107,6 +122,7 @@ export class MoneriumClient {
    * For automatic wallet link, add the following properties: `address`, `signature` & `chainId`
    * @returns string
    * {@link https://monerium.dev/api-docs#operation/auth}
+   * @category Auth
    */
   async authorize(client?: AuthFlowOptions) {
     const clientId =
@@ -140,6 +156,7 @@ export class MoneriumClient {
    * Get access to the API
    * @param {AuthorizationCodeCredentials | ClientCredentials} client - the client credentials
    * @returns boolean to indicate if access has been granted
+   * @category Auth
    */
   async getAccess(
     client?: AuthorizationCodeCredentials | ClientCredentials
@@ -252,6 +269,7 @@ export class MoneriumClient {
   // -- Read Methods
   /**
    * {@link https://monerium.dev/api-docs#operation/auth-context}
+   * @category Auth
    */
   getAuthContext(): Promise<AuthContext> {
     return this.#api<AuthContext>('get', `auth/context`);
@@ -260,15 +278,15 @@ export class MoneriumClient {
   /**
    * {@link https://monerium.dev/api-docs#operation/profile}
    * @param {string} profileId - the id of the profile to fetch.
-
+   * @category Profiles
    */
   getProfile(profileId: string): Promise<Profile> {
     return this.#api<Profile>('get', `profiles/${profileId}`);
   }
-
   /**
    * {@link https://monerium.dev/api-docs#operation/profile-balances}
    * @param {string=} profileId - the id of the profile to fetch balances.
+   * @category Accounts
    */
   getBalances(profileId?: string): Promise<Balances[]> {
     if (profileId) {
@@ -280,6 +298,7 @@ export class MoneriumClient {
 
   /**
    * {@link https://monerium.dev/api-docs#operation/orders}
+   * @category Orders
    */
   getOrders(filter?: OrderFilter): Promise<Order[]> {
     const searchParams = urlEncoded(filter as Record<string, string>);
@@ -287,6 +306,7 @@ export class MoneriumClient {
   }
   /**
    * {@link https://monerium.dev/api-docs#operation/order}
+   * @category Orders
    */
   getOrder(orderId: string): Promise<Order> {
     return this.#api<Order>('get', `orders/${orderId}`);
@@ -294,6 +314,7 @@ export class MoneriumClient {
 
   /**
    * {@link https://monerium.dev/api-docs#operation/tokens}
+   * @category Tokens
    */
   getTokens(): Promise<Token[]> {
     return this.#api<Token[]>('get', 'tokens');
@@ -303,6 +324,7 @@ export class MoneriumClient {
 
   /**
    * {@link https://monerium.dev/api-docs#operation/profile-addresses}
+   * @category Accounts
    */
   linkAddress(profileId: string, body: LinkAddress) {
     body = mapChainIdToChain(body);
@@ -317,6 +339,7 @@ export class MoneriumClient {
 
   /**
    * {@link https://monerium.dev/api-docs#operation/post-orders}
+   * @category Orders
    */
   placeOrder(order: NewOrder, profileId?: string): Promise<Order> {
     const body = {
@@ -342,6 +365,7 @@ export class MoneriumClient {
 
   /**
    * {@link https://monerium.dev/api-docs#operation/supporting-document}
+   * @category Orders
    */
   uploadSupportingDocument(document: File): Promise<SupportingDoc> {
     const formData = new FormData();
@@ -428,7 +452,10 @@ export class MoneriumClient {
   };
 
   // -- Notifications
-
+  /**
+   * Connects to the order notifications socket
+   * @category Orders
+   */
   async connectOrderSocket() {
     // When the user is authenticated, we connect to the order notifications socket in case
     // the user has subscribed to any event
@@ -436,6 +463,10 @@ export class MoneriumClient {
       this.#socket = this.subscribeToOrderNotifications();
     }
   }
+  /**
+   * Subscribes to the order notifications socket
+   * @category Orders
+   */
   subscribeToOrderNotifications = (): WebSocket => {
     const socketUrl = `${this.#env.wss}/profiles/${this.bearerProfile?.profile}/orders?access_token=${this.bearerProfile?.access_token}`;
 
@@ -466,6 +497,7 @@ export class MoneriumClient {
   };
   /**
    * Cleanups the socket and the subscriptions
+   * @category Auth
    */
   async disconnect() {
     if (!isServer) {
@@ -478,6 +510,7 @@ export class MoneriumClient {
   }
   /**
    * Revokes access
+   * @category Auth
    */
   async revokeAccess() {
     if (!isServer) {
@@ -492,6 +525,7 @@ export class MoneriumClient {
    * {@link https://monerium.dev/api-docs#operation/profile-orders-notifications}
    * @param event The event to subscribe to
    * @param handler The handler to be called when the event is triggered
+   * @category Orders
    */
 
   subscribeOrders(event: MoneriumEvent, handler: MoneriumEventListener): void {
@@ -501,6 +535,7 @@ export class MoneriumClient {
   /**
    * Unsubscribe from MoneriumEvent and close the socket if there are no more subscriptions
    * @param event The event to unsubscribe from
+   * @category Orders
    */
   unsubscribeOrders(event: MoneriumEvent): void {
     this.#subscriptions.delete(event as OrderState);
@@ -514,16 +549,19 @@ export class MoneriumClient {
 
   /**
    * @deprecated since v2.6.4, will be removed in 2.7.2+, use {@link getAccess} instead.
+   * @hidden
    */
   auth = async (args: AuthArgs) => await this.#grantAccess(args);
 
   /**
    * @deprecated since v2.7.1, will be removed in 2.7.2+, use {@link getAccess} instead.
+   * @hidden
    */
   connect = async (args: AuthArgs) => await this.#grantAccess(args);
 
   /**
    * @deprecated since v2.6.4, will be removed in 2.7.2+, use {@link authorize} instead.
+   * @hidden
    */
   getAuthFlowURI = (args: PKCERequestArgs): string => {
     const url = getAuthFlowUrlAndStoreCodeVerifier(this.#env.api, args);
@@ -532,10 +570,14 @@ export class MoneriumClient {
   };
 
   /**
-   *  @deprecated since v2.0.7, will be removed in 2.7.2+, use {@link getAuthFlowURI} instead.
+   * @deprecated since v2.0.7, will be removed in 2.7.2+, use {@link getAuthFlowURI} instead.
+   * @hidden
    */
   pkceRequest = (args: PKCERequestArgs) => this.getAuthFlowURI(args);
 
   // -- Getters (mainly for testing)
+  /**
+   * @hidden
+   */
   getEnvironment = (): Environment => this.#env;
 }

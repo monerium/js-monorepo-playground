@@ -3,11 +3,13 @@
  */
 import 'jest-localstorage-mock';
 
-import { STORAGE_CODE_VERIFIER } from '../src/constants';
+import constants from '../src/constants';
 import {
   generateCodeChallenge,
   getAuthFlowUrlAndStoreCodeVerifier,
 } from '../src/helpers/auth.helpers';
+
+const { STORAGE_CODE_VERIFIER } = constants;
 
 describe('getAuthFlowUrlAndStoreCodeVerifier', () => {
   afterEach(() => {
