@@ -10,6 +10,14 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
+    "docs": {
+      "dependsOn": ["^build"],
+      "outputs": ["docs/**"]
+    },
+    "docs:watch": {
+      "dependsOn": ["^build"],
+      "outputs": ["docs/**"]
+    },
     "lint": {},
     "lint:style": {},
     "prepublish": {

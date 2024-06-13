@@ -1,9 +1,19 @@
+| [Monerium.com](https://monerium.com/) | [Monerium.app](https://monerium.app/) | [Monerium.dev](https://monerium.dev/) |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
+
 # Monerium SDK Documentation
 
 Monerium connects your web3 wallet to any euro bank account with your personal IBAN.
 All incoming euro payments are automatically minted as EURe tokens to your wallet.
 Sending EURe to traditional bank accounts is just as easy.
 With a single signature from your wallet, your EURe is burned and sent as Euros to any bank account.
+
+## Useful resources
+
+- [Documentation](./docs/README.md)
+- [API Documentation](https://monerium.dev/api-docs)
+- [Developer portal](https://monerium.dev/')
+- [NPM](https://www.npmjs.com/package/@monerium/sdk)
 
 ## Table of Contents
 
@@ -389,8 +399,8 @@ Common questions developers have regarding the SDK.
 
 [Telegram](https://t.me/+lGtM1gY9zWthNGE8)
 
-[Github Issues](https://github.com/monerium/js-sdk/issues)
+[Github Issues](https://github.com/monerium/js-monorepo/issues)
 
 ## Release Notes
 
-https://github.com/monerium/js-sdk/releases
+https://github.com/monerium/js-monorepo/releases
