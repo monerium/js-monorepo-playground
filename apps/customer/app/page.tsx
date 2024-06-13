@@ -8,9 +8,6 @@ import { MoneriumConnect } from 'components/MoneriumConnect/MoneriumConnect';
 
 import s from './page.module.scss';
 
-const test = '';
-const test = '';
-
 export default function Home() {
   return (
     <Container component="main" maxWidth="md">
