@@ -1,4 +1,16 @@
-import { Balances, Chain, ChainId, Currency, Networks, Profile } from './types';
+import {
+  Balances,
+  Chain,
+  ChainId,
+  Currency,
+  CurrencyAccounts,
+  LinkAddress,
+  Networks,
+  NewOrder,
+  NewOrderByAddress,
+  Order,
+  Profile,
+} from './types';
 
 export const rfc3339 = (d: Date) => {
   if (d.toString() === 'Invalid Date') {
@@ -145,15 +157,12 @@ export const getAmount = (
   );
 };
 
-export const mapChainIdToChain = (body: {
-  chainId?: number;
-  [key: string]: unknown;
-}) => {
+export const mapChainIdToChain = (body: any) => {
   if (body?.chainId) {
     const { chainId, ...rest } = body;
     return {
       ...rest,
-      chain: getChain(chainId),
+      chain: getChain(chainId as number),
     };
   }
   return body;

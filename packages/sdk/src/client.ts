@@ -20,6 +20,7 @@ import type {
   ClassOptions,
   ClientCredentials,
   ClientCredentialsRequest,
+  CurrencyAccounts,
   ENV,
   Environment,
   LinkAddress,
