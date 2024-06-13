@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 
 import { useMonerium } from '@monerium/sdk-react-provider';
 
@@ -28,6 +29,7 @@ export default function AuthorizedLayout({
       <>
         <Box sx={{ pb: 7 }}>
           {children}
+          <Paper></Paper>
           <BottomNavigation />
         </Box>
       </>

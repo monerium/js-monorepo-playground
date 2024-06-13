@@ -11,8 +11,8 @@ import {
 import type {
   AuthArgs,
   AuthCodeRequest,
-  AuthFlowOptions,
   AuthContext,
+  AuthFlowOptions,
   AuthorizationCodeCredentials,
   Balances,
   BearerProfile,

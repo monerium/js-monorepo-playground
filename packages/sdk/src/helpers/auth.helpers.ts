@@ -12,6 +12,7 @@ import {
 } from '../types';
 import { getChain, urlEncoded } from '../utils';
 
+const lol = 'lol';
 /** Structure the Auth Flow params, support for ChainId instead of chain & network */
 export const getAuthFlowParams = (
   args: PKCERequestArgs,

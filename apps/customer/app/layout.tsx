@@ -6,7 +6,7 @@ import Providers from 'components/App/Providers';
 import ThemeModeToggle from 'components/ThemeModeToggle';
 
 import '@rainbow-me/rainbowkit/styles.css';
-import './globals.scss';
+import "./globals.scss";
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
