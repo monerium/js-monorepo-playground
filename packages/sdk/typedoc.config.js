@@ -5,12 +5,14 @@
 module.exports = {
   $schema: 'https://typedoc.org/schema.json',
   plugin: ['typedoc-plugin-markdown'],
+  tsconfig: 'tsconfig.json',
+  excludePrivate: true,
   name: 'Monerium SDK',
-  out: 'docs',
+  out: 'docs/generated',
   readme: 'none',
   // githubPages: true,
   includeVersion: true,
-  cleanOutputDir: true,
+  cleanOutputDir: false,
   searchInComments: true,
   // entryPoints: [
   //   'src/client.ts',
@@ -59,20 +61,19 @@ module.exports = {
     'Other',
   ],
   // titleLink: 'https://www.npmjs.com/package/@monerium/sdk',
-  tsconfig: 'tsconfig.json',
-  excludePrivate: true,
-  navigationLinks: {
-    'monerium.com': 'https://monerium.com/',
-    'monerium.app': 'https://monerium.app/',
-  },
-  sidebarLinks: {
-    NPM: 'https://www.npmjs.com/package/@monerium/sdk',
-    Issues: 'https://github.com/monerium/js-monorepo/issues',
-    'Source code':
-      'https://github.com/monerium/js-monorepo/tree/main/packages/sdk',
-    'Developer portal': 'https://monerium.dev/',
-    'API documentation': 'https://monerium.dev/api-docs',
-    '': '',
-  },
+
+  // navigationLinks: {
+  //   'monerium.com': 'https://monerium.com/',
+  //   'monerium.app': 'https://monerium.app/',
+  // },
+  // sidebarLinks: {
+  //   NPM: 'https://www.npmjs.com/package/@monerium/sdk',
+  //   Issues: 'https://github.com/monerium/js-monorepo/issues',
+  //   'Source code':
+  //     'https://github.com/monerium/js-monorepo/tree/main/packages/sdk',
+  //   'Developer portal': 'https://monerium.dev/',
+  //   'API documentation': 'https://monerium.dev/api-docs',
+  //   '': '',
+  // },
   entryPointStrategy: 'expand',
 };

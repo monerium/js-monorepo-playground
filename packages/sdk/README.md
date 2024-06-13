@@ -10,7 +10,7 @@ With a single signature from your wallet, your EURe is burned and sent as Euros 
 
 ## Useful resources
 
-- [Documentation](./docs/README.md)
+- [Documentation](./docs/generated/README.md)
 - [API Documentation](https://monerium.dev/api-docs)
 - [Developer portal](https://monerium.dev/')
 - [NPM](https://www.npmjs.com/package/@monerium/sdk)

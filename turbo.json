@@ -12,11 +12,11 @@
     },
     "docs": {
       "dependsOn": ["^build"],
-      "outputs": ["docs/**"]
+      "outputs": ["docs/generated/**"]
     },
     "docs:watch": {
       "dependsOn": ["^build"],
-      "outputs": ["docs/**"]
+      "outputs": ["docs/generated/**"]
     },
     "lint": {},
     "lint:style": {},
