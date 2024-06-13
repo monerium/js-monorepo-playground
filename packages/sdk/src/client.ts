@@ -1,5 +1,5 @@
 import { MONERIUM_CONFIG } from './config';
-import { STORAGE_CODE_VERIFIER, STORAGE_REFRESH_TOKEN } from './constants';
+import constants from './constants';
 import {
   cleanQueryString,
   getAuthFlowUrlAndStoreCodeVerifier,
@@ -39,6 +39,7 @@ import type {
 import { mapChainIdToChain, urlEncoded } from './utils';
 
 // import pjson from "../package.json";
+const { STORAGE_CODE_VERIFIER, STORAGE_REFRESH_TOKEN } = constants;
 
 const isServer = typeof window === 'undefined';
 

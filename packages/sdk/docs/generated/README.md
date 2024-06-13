@@ -8,9 +8,9 @@
 
 - [MoneriumClient](classes/MoneriumClient.md)
 
-## Constants
+## Variables
 
-- [constants](namespaces/constants/README.md)
+- [constants](variables/constants.md)
 
 ## Functions
 
