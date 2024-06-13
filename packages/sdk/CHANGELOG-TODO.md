@@ -2,3 +2,4 @@ These are changes being added in this repository that need to be specified in th
 
 - Typescript types export fixed.
 - Added 'gbp', 'usd' and 'isk' to Currency type.
+- Reduce bundle size

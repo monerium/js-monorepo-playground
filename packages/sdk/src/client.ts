@@ -199,11 +199,14 @@ export class MoneriumClient {
       | ClientCredentialsRequest;
 
     if (isAuthCode(args)) {
-      params = { ...args, grant_type: 'authorization_code' };
+      params = { ...args, grant_type: 'authorization_code' } as AuthCodeRequest;
     } else if (isRefreshToken(args)) {
-      params = { ...args, grant_type: 'refresh_token' };
+      params = { ...args, grant_type: 'refresh_token' } as RefreshTokenRequest;
     } else if (isClientCredentials(args)) {
-      params = { ...args, grant_type: 'client_credentials' };
+      params = {
+        ...args,
+        grant_type: 'client_credentials',
+      } as ClientCredentialsRequest;
     } else {
       throw new Error('Authorization grant type could not be detected.');
     }

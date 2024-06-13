@@ -1,20 +1,29 @@
 {
   "name": "@monerium/sdk",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "version": "2.12.1",
+  "description": "Essential tools to interact with the Monerium API, an electronic money issuer.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
+  "files": [
+    "dist/index.js",
+    "dist/index.mjs",
+    "dist/index.d.ts"
+  ],
   "scripts": {
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch --onSuccess 'pnpm type-map'",
+    "build": "tsup --splitting",
+    "build:test": "tsup",
+    "type-map": "tsc --emitDeclarationOnly --declaration",
     "lint": "eslint . --fix",
-    "prepublish": "publish --dry-run",
+    "pub:pre": "pnpm publish --no-git-checks --dry-run",
     "test": "jest",
     "test:watch": "jest --watch"
   },

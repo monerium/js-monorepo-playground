@@ -1,17 +1,12 @@
 Use changeset for publishable packages
 
-Add commitcli
-Add precondition hooks - husky.
 Add CI/CD - github actions
 https://turbo.build/repo/docs/guides/ci-vendors/github-actions
 
 # Customer
 
-- Add commitlint
-
 # SDK
 
-- Add commitlint
 - activate publish
   https://github.com/monerium/js-sdk/blob/main/libs/sdk/.yarnrc.yml
   https://turbo.build/repo/docs/guides/publishing-libraries
