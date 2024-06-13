@@ -4,7 +4,5 @@ const buildEslintCommand = (filenames) =>
   `next lint --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(' --file ')}`;
 
 module.exports = {
-  '*.{ts,tsx}': [buildEslintCommand],
-  '*.{js, json,md}': ['prettier --write'],
-  '*.{css,scss,sass}': ['pnpm lint:style'],
+  '*.{ts,tsx}': [buildEslintCommand, 'prettier --write'],
 };
