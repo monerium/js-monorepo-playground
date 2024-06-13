@@ -5,8 +5,8 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
 import { MoneriumConnect } from 'components/MoneriumConnect/MoneriumConnect';
-
 import s from './page.module.scss';
+
 
 const loladsd = ''
 
