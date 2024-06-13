@@ -43,7 +43,6 @@
     "js-cookie": "^3.0.5",
     "postcss": "^8",
     "react-transition-state": "^2.1.1",
-    "rfs": "^10.0.0",
     "sass": "^1.77.4",
     "stylelint": "^16.6.1",
     "typescript": "^5"
