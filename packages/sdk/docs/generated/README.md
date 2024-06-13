@@ -8,9 +8,9 @@
 
 - [MoneriumClient](classes/MoneriumClient.md)
 
-## Variables
+## Constants
 
-- [constants](variables/constants.md)
+- [constants](namespaces/constants/README.md)
 
 ## Functions
 
@@ -24,10 +24,13 @@
 - [Account](interfaces/Account.md)
 - [AuthCodeRequest](interfaces/AuthCodeRequest.md)
 - [AuthContext](interfaces/AuthContext.md)
+- [AuthFlowOptions](interfaces/AuthFlowOptions.md)
 - [AuthProfile](interfaces/AuthProfile.md)
+- [AuthorizationCodeCredentials](interfaces/AuthorizationCodeCredentials.md)
 - [Balance](interfaces/Balance.md)
 - [Balances](interfaces/Balances.md)
 - [BearerProfile](interfaces/BearerProfile.md)
+- [ClientCredentials](interfaces/ClientCredentials.md)
 - [ClientCredentialsRequest](interfaces/ClientCredentialsRequest.md)
 - [Corporation](interfaces/Corporation.md)
 - [Counterpart](interfaces/Counterpart.md)
@@ -45,6 +48,7 @@
 - [Order](interfaces/Order.md)
 - [OrderFilter](interfaces/OrderFilter.md)
 - [OrderMetadata](interfaces/OrderMetadata.md)
+- [OrderNotification](interfaces/OrderNotification.md)
 - [Profile](interfaces/Profile.md)
 - [RefreshTokenRequest](interfaces/RefreshTokenRequest.md)
 - [SCAN](interfaces/SCAN.md)
@@ -55,13 +59,10 @@
 ## Type Aliases
 
 - [AuthArgs](type-aliases/AuthArgs.md)
-- [AuthFlowOptions](type-aliases/AuthFlowOptions.md)
-- [AuthorizationCodeCredentials](type-aliases/AuthorizationCodeCredentials.md)
 - [BearerTokenCredentials](type-aliases/BearerTokenCredentials.md)
 - [Chain](type-aliases/Chain.md)
 - [ChainId](type-aliases/ChainId.md)
 - [ClassOptions](type-aliases/ClassOptions.md)
-- [ClientCredentials](type-aliases/ClientCredentials.md)
 - [Config](type-aliases/Config.md)
 - [ENV](type-aliases/ENV.md)
 - [Environment](type-aliases/Environment.md)
@@ -75,7 +76,6 @@
 - [Networks](type-aliases/Networks.md)
 - [NewOrder](type-aliases/NewOrder.md)
 - [OpenArgs](type-aliases/OpenArgs.md)
-- [OrderNotification](type-aliases/OrderNotification.md)
 - [PKCERequest](type-aliases/PKCERequest.md)
 - [PKCERequestArgs](type-aliases/PKCERequestArgs.md)
 - [PolygonTestnet](type-aliases/PolygonTestnet.md)
@@ -94,3 +94,9 @@
 - [PaymentStandard](enumerations/PaymentStandard.md)
 - [Permission](enumerations/Permission.md)
 - [ProfileType](enumerations/ProfileType.md)
+
+## References
+
+### default
+
+Renames and re-exports [MoneriumClient](classes/MoneriumClient.md)

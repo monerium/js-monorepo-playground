@@ -20,13 +20,27 @@
 
 [`MoneriumClient`](MoneriumClient.md)
 
-#### Default
+#### Default Value
 
 `sandbox`
 
+#### Example
+
+```ts
+new MoneriumClient(); // defaults to `sandbox`
+
+new MoneriumClient('production');
+
+new MoneriumClient({
+  environment: 'sandbox',
+  clientId: 'your-client-id',
+  redirectUrl: 'your-redirect-url',
+});
+```
+
 #### Source
 
-[client.ts:77](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L77)
+[client.ts:87](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L87)
 
 ## Properties
 
@@ -38,7 +52,7 @@ The bearer profile will be available after authentication, it includes the `acce
 
 #### Source
 
-[client.ts:58](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L58)
+[client.ts:58](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L58)
 
 ---
 
@@ -48,7 +62,7 @@ The bearer profile will be available after authentication, it includes the `acce
 
 #### Source
 
-[client.ts:66](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L66)
+[client.ts:66](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L66)
 
 ---
 
@@ -60,7 +74,7 @@ The state parameter is used to maintain state between the request and the callba
 
 #### Source
 
-[client.ts:72](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L72)
+[client.ts:72](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L72)
 
 ## Methods
 
@@ -76,7 +90,7 @@ For automatic wallet link, add the following properties: `address`, `signature` 
 
 ##### Parameters
 
-• **client?**: [`AuthFlowOptions`](../type-aliases/AuthFlowOptions.md)
+• **client?**: [`AuthFlowOptions`](../interfaces/AuthFlowOptions.md)
 
 ##### Returns
 
@@ -87,7 +101,7 @@ string
 
 ##### Source
 
-[client.ts:116](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L116)
+[client.ts:126](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L126)
 
 ---
 
@@ -103,7 +117,7 @@ Cleanups the socket and the subscriptions
 
 ##### Source
 
-[client.ts:491](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L491)
+[client.ts:501](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L501)
 
 ---
 
@@ -115,7 +129,7 @@ Get access to the API
 
 ##### Parameters
 
-• **client?**: [`ClientCredentials`](../type-aliases/ClientCredentials.md) \| [`AuthorizationCodeCredentials`](../type-aliases/AuthorizationCodeCredentials.md)
+• **client?**: [`ClientCredentials`](../interfaces/ClientCredentials.md) \| [`AuthorizationCodeCredentials`](../interfaces/AuthorizationCodeCredentials.md)
 
 the client credentials
 
@@ -127,7 +141,7 @@ boolean to indicate if access has been granted
 
 ##### Source
 
-[client.ts:150](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L150)
+[client.ts:160](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L160)
 
 ---
 
@@ -143,7 +157,7 @@ boolean to indicate if access has been granted
 
 ##### Source
 
-[client.ts:263](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L263)
+[client.ts:273](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L273)
 
 ---
 
@@ -159,7 +173,7 @@ Revokes access
 
 ##### Source
 
-[client.ts:504](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L504)
+[client.ts:514](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L514)
 
 ### Accounts
 
@@ -181,7 +195,7 @@ the id of the profile to fetch balances.
 
 ##### Source
 
-[client.ts:280](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L280)
+[client.ts:290](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L290)
 
 ---
 
@@ -203,7 +217,7 @@ the id of the profile to fetch balances.
 
 ##### Source
 
-[client.ts:318](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L318)
+[client.ts:328](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L328)
 
 ### Profiles
 
@@ -225,7 +239,7 @@ the id of the profile to fetch.
 
 ##### Source
 
-[client.ts:272](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L272)
+[client.ts:282](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L282)
 
 ### Orders
 
@@ -241,7 +255,7 @@ Connects to the order notifications socket
 
 ##### Source
 
-[client.ts:448](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L448)
+[client.ts:458](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L458)
 
 ---
 
@@ -261,7 +275,7 @@ Connects to the order notifications socket
 
 ##### Source
 
-[client.ts:300](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L300)
+[client.ts:310](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L310)
 
 ---
 
@@ -281,7 +295,7 @@ Connects to the order notifications socket
 
 ##### Source
 
-[client.ts:292](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L292)
+[client.ts:302](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L302)
 
 ---
 
@@ -303,7 +317,7 @@ Connects to the order notifications socket
 
 ##### Source
 
-[client.ts:333](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L333)
+[client.ts:343](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L343)
 
 ---
 
@@ -331,7 +345,7 @@ The handler to be called when the event is triggered
 
 ##### Source
 
-[client.ts:520](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L520)
+[client.ts:530](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L530)
 
 ---
 
@@ -347,7 +361,7 @@ Subscribes to the order notifications socket
 
 ##### Source
 
-[client.ts:459](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L459)
+[client.ts:469](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L469)
 
 ---
 
@@ -369,7 +383,7 @@ The event to unsubscribe from
 
 ##### Source
 
-[client.ts:529](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L529)
+[client.ts:539](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L539)
 
 ---
 
@@ -389,7 +403,7 @@ The event to unsubscribe from
 
 ##### Source
 
-[client.ts:359](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L359)
+[client.ts:369](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L369)
 
 ### Tokens
 
@@ -405,4 +419,4 @@ The event to unsubscribe from
 
 ##### Source
 
-[client.ts:308](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/client.ts#L308)
+[client.ts:318](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/client.ts#L318)

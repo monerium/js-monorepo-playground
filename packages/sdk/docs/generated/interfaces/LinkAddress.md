@@ -14,7 +14,7 @@
 
 #### Source
 
-[types.ts:448](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/types.ts#L448)
+[types.ts:448](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/types.ts#L448)
 
 ---
 
@@ -24,7 +24,7 @@
 
 #### Source
 
-[types.ts:445](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/types.ts#L445)
+[types.ts:445](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/types.ts#L445)
 
 ---
 
@@ -38,7 +38,7 @@
 
 #### Source
 
-[types.ts:452](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/types.ts#L452)
+[types.ts:452](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/types.ts#L452)
 
 ---
 
@@ -48,7 +48,7 @@
 
 #### Source
 
-[types.ts:453](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/types.ts#L453)
+[types.ts:453](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/types.ts#L453)
 
 ---
 
@@ -58,7 +58,7 @@
 
 #### Source
 
-[types.ts:446](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/types.ts#L446)
+[types.ts:446](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/types.ts#L446)
 
 ---
 
@@ -72,7 +72,7 @@
 
 #### Source
 
-[types.ts:450](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/types.ts#L450)
+[types.ts:450](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/types.ts#L450)
 
 ---
 
@@ -82,4 +82,4 @@
 
 #### Source
 
-[types.ts:447](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/types.ts#L447)
+[types.ts:447](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/types.ts#L447)

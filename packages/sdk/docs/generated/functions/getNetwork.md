@@ -26,4 +26,4 @@ network will be removed from Monerium API in the near future.
 
 ## Source
 
-[utils.ts:101](https://github.com/monerium/js-monorepo/blob/63219fde0f935acb35ce19f47571455bbfc0ffa7/packages/sdk/src/utils.ts#L101)
+[utils.ts:101](https://github.com/monerium/js-monorepo/blob/510d89096a606a615f5ce0c00a69ec9c89563e68/packages/sdk/src/utils.ts#L101)

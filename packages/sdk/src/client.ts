@@ -72,7 +72,17 @@ export class MoneriumClient {
   state: string | undefined;
 
   /**
-   * @default `sandbox`
+   * @defaultValue `sandbox`
+   * @example
+   * new MoneriumClient() // defaults to `sandbox`
+   *
+   * new MoneriumClient('production')
+   *
+   * new MoneriumClient({
+   *  environment: 'sandbox',
+   *  clientId: 'your-client-id',
+   *  redirectUrl: 'your-redirect-url'
+   * })
    * */
   constructor(envOrOptions?: ENV | ClassOptions) {
     // No arguments, default to sandbox

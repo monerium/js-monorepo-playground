@@ -455,7 +455,7 @@ export interface LinkAddress {
 
 // -- Notifications
 
-export type OrderNotification = {
+export interface OrderNotification {
   id: string;
   profile: string;
   accountId: string;
@@ -470,7 +470,7 @@ export type OrderNotification = {
   rejectedReason: string;
   supportingDocumentId: string;
   meta: OrderMetadata;
-};
+}
 
 export type MoneriumEvent = OrderState;
 
@@ -480,24 +480,24 @@ export type ClassOptions = {
   environment?: ENV;
 } & BearerTokenCredentials;
 
-export type AuthFlowOptions = {
+export interface AuthFlowOptions {
   clientId?: string;
   redirectUrl?: string;
   address?: string;
   signature?: string;
   chainId?: ChainId;
   state?: string;
-};
+}
 
-export type ClientCredentials = {
+export interface ClientCredentials {
   clientId: string;
   clientSecret: string;
-};
+}
 
-export type AuthorizationCodeCredentials = {
+export interface AuthorizationCodeCredentials {
   clientId: string;
   redirectUrl: string;
-};
+}
 
 export type BearerTokenCredentials =
   | ClientCredentials
