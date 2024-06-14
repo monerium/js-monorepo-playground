@@ -13,8 +13,8 @@ COPY . .
 RUN turbo prune customer --docker
 
 FROM base AS installer
-RUN apk add --no-cache python3 py3-pip make g++
 RUN apk update
+RUN apk add --no-cache python3 py3-pip make g++
 
 WORKDIR /app
 
