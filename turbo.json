@@ -8,7 +8,8 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "env": ["STANDALONE", "false"]
     },
     "docs": {
       "dependsOn": ["^build"],
@@ -22,6 +23,9 @@
     "lint:style": {},
     "prepublish": {
       "dependsOn": ["^build"]
+    },
+    "start": {
+      "dependsOn": ["build"]
     },
     "test": {
       "dependsOn": ["^build"]
