@@ -18,7 +18,7 @@ One of the options for the [AuthArgs](../type-aliases/AuthArgs.md).
 
 #### Source
 
-[types.ts:97](https://github.com/monerium/js-monorepo/blob/95da1ee68c22ee2a6c87ac928b307c8f3825242a/packages/sdk/src/types.ts#L97)
+[types.ts:97](https://github.com/monerium/js-monorepo/blob/26e2ea0861cb901d7ae432326a3f8b4932fe0d47/packages/sdk/src/types.ts#L97)
 
 ---
 
@@ -28,7 +28,7 @@ One of the options for the [AuthArgs](../type-aliases/AuthArgs.md).
 
 #### Source
 
-[types.ts:98](https://github.com/monerium/js-monorepo/blob/95da1ee68c22ee2a6c87ac928b307c8f3825242a/packages/sdk/src/types.ts#L98)
+[types.ts:98](https://github.com/monerium/js-monorepo/blob/26e2ea0861cb901d7ae432326a3f8b4932fe0d47/packages/sdk/src/types.ts#L98)
 
 ---
 
@@ -38,7 +38,7 @@ One of the options for the [AuthArgs](../type-aliases/AuthArgs.md).
 
 #### Source
 
-[types.ts:99](https://github.com/monerium/js-monorepo/blob/95da1ee68c22ee2a6c87ac928b307c8f3825242a/packages/sdk/src/types.ts#L99)
+[types.ts:99](https://github.com/monerium/js-monorepo/blob/26e2ea0861cb901d7ae432326a3f8b4932fe0d47/packages/sdk/src/types.ts#L99)
 
 ---
 
@@ -48,7 +48,7 @@ One of the options for the [AuthArgs](../type-aliases/AuthArgs.md).
 
 #### Source
 
-[types.ts:96](https://github.com/monerium/js-monorepo/blob/95da1ee68c22ee2a6c87ac928b307c8f3825242a/packages/sdk/src/types.ts#L96)
+[types.ts:96](https://github.com/monerium/js-monorepo/blob/26e2ea0861cb901d7ae432326a3f8b4932fe0d47/packages/sdk/src/types.ts#L96)
 
 ---
 
@@ -58,7 +58,7 @@ One of the options for the [AuthArgs](../type-aliases/AuthArgs.md).
 
 #### Source
 
-[types.ts:100](https://github.com/monerium/js-monorepo/blob/95da1ee68c22ee2a6c87ac928b307c8f3825242a/packages/sdk/src/types.ts#L100)
+[types.ts:100](https://github.com/monerium/js-monorepo/blob/26e2ea0861cb901d7ae432326a3f8b4932fe0d47/packages/sdk/src/types.ts#L100)
 
 ---
 
@@ -68,4 +68,4 @@ One of the options for the [AuthArgs](../type-aliases/AuthArgs.md).
 
 #### Source
 
-[types.ts:101](https://github.com/monerium/js-monorepo/blob/95da1ee68c22ee2a6c87ac928b307c8f3825242a/packages/sdk/src/types.ts#L101)
+[types.ts:101](https://github.com/monerium/js-monorepo/blob/26e2ea0861cb901d7ae432326a3f8b4932fe0d47/packages/sdk/src/types.ts#L101)
