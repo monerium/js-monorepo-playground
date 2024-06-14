@@ -23,8 +23,6 @@ export const metadata: Metadata = {
     'Monerium issues onchain fiat – directly transferable between your wallet and bank accounts.',
 };
 
-const triggerAction = '';
-
 export default function RootLayout({
   children,
 }: Readonly<{

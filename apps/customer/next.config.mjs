@@ -4,16 +4,43 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+/**
+ * Standalone mode needs to be enabled for Docker builds.
+ * https://nextjs.org/docs/pages/api-reference/next-config-js/output
+ * */
+const isStandalone = process.env.STANDALONE === 'true';
+
 const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false, net: false, tls: false };
-    // https://dev.to/dinhkhai0201/module-not-found-cant-resolve-pino-pretty-g6
-    config.externals.push('pino-pretty', 'encoding');
+  webpack: (config, { dev }) => {
+    if (dev) {
+      // Silencing warnings about missing dependencies in development.
+      // https://dev.to/dinhkhai0201/module-not-found-cant-resolve-pino-pretty-g6
+      config.resolve.fallback = { fs: false, net: false, tls: false };
+      config.externals.push('pino-pretty', 'encoding');
+    }
     return config;
   },
 };
 
-export default nextConfig;
+const standaloneConfig = {
+  output: 'standalone',
+  experimental: {
+    outputFileTracingRoot: path.join(__dirname, '../../'),
+  },
+};
+
+const finalConfig = isStandalone
+  ? {
+      ...nextConfig,
+      ...standaloneConfig,
+      experimental: {
+        ...nextConfig.experimental,
+        ...standaloneConfig.experimental,
+      },
+    }
+  : nextConfig;
+
+export default finalConfig;
