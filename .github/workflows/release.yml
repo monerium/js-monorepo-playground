@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           # this assumes that you have created a personal access token
           # (PAT) and configured it as a GitHub action secret named
@@ -23,3 +24,14 @@ jobs:
           target-branch: chore/release-please
           # this is a built-in strategy in release-please, see "Action Inputs"
           # for more options
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+        if: ${{ steps.release.outputs.releases_created }}
+      - name: PrePublish SDK
+        run: pnpm --filter @monerium/sdk pre:pub
+        if: ${{ steps.release.outputs['packages/sdk--release_created'] }}
+      - name: PrePublish React Provider
+        run: pnpm --filter @monerium/sdk-react-provider pre:pub
+        if: ${{ steps.release.outputs['packages/sdk-react-provider--release_created'] }}

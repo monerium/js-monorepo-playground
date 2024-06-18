@@ -21,7 +21,7 @@
     },
     "lint": {},
     "lint:style": {},
-    "prepublish": {
+    "pub:pre": {
       "dependsOn": ["build"]
     },
     "start": {
