@@ -1,0 +1,15 @@
+{
+  "release-type": "node",
+  "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]",
+  "target-branch": "chore/release-please",
+  "packages": {
+    "package/test": {
+      "package-name": "test",
+      "pull-request-header": "Test1"
+    },
+    "package/test2": {
+      "package-name": "test2",
+      "pull-request-header": "Test2"
+    }
+  }
+}
