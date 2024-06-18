@@ -1,22 +1,44 @@
 {
+  "pull-request-header": "Releases",
   "packages": {
     ".": {
-      "package-name": "monorepo",
-      "pull-request-header": "Monorepo",
-      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]",
-      "target-branch": "chore/release-please"
+      "package-name": "Monorepo",
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "apps/customer": {
+      "package-name": "Customer client",
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "packages/sdk": {
+      "package-name": "@monerium/sdk",
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "packages/sdk-react-provider": {
+      "package-name": "@monerium/sdk-react-provider",
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "packages/eslint-config": {
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "packages/postcss-config": {
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "packages/styleling-config": {
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "packages/typescript-config": {
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
+    },
+    "packages/ui": {
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
     },
     "packages/test": {
       "package-name": "test",
-      "pull-request-header": "Test1",
-      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]",
-      "target-branch": "chore/release-please"
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
     },
     "packages/test2": {
       "package-name": "test2",
-      "pull-request-header": "Test2",
-      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]",
-      "target-branch": "chore/release-please"
+      "changelog-types": "[{\"type\":\"feat\",\"section\":\"Features\",\"hidden\":false},{\"type\":\"fix\",\"section\":\"Bug Fixes\",\"hidden\":false},{\"type\":\"chore\",\"section\":\"Miscellaneous\",\"hidden\":false},{ \"type\": \"revert\", \"section\": \"Reverts\", \"hidden\": false }]"
     }
   }
 }
