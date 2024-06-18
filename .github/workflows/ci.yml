@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "chore/release-please"]
   pull_request:
     types: [opened, synchronize]
 
@@ -43,3 +43,6 @@ jobs:
 
       - name: Test
         run: pnpm test
+
+      - name: PrePublish
+        run: pnpm pub:pre
