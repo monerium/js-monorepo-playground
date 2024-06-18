@@ -35,3 +35,11 @@ jobs:
       - name: PrePublish React Provider
         run: pnpm --filter @monerium/sdk-react-provider pre:pub
         if: ${{ steps.release.outputs['packages/sdk-react-provider--release_created'] }}
+      - name: Debug
+        run: |
+          echo '${{ steps.release.outputs.tag_name }}'
+          echo '${{ steps.release.outputs.releases_created || false }}'
+          echo '${{ toJson(steps.release.outputs) }}'
+          echo '${{ steps.release.outputs.pr-branch }}'
+          echo '${{ toJson(steps.release.outputs.pr)['.headBranchName'] }}'
+          echo '${{ steps.release.outputs.sha }}'
