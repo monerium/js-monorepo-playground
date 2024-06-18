@@ -1,5 +1,6 @@
 {
   "name": "test-component-lib1",
+  "private": false,
   "version": "0.0.3",
   "description": "test-component-lib1",
   "repository": {
