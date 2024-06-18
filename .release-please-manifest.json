@@ -1,6 +1,6 @@
 {
   ".": "0.0.2",
-  "apps/customer": "0.1.0",
+  "apps/customer": "0.0.1",
   "packages/sdk": "2.12.1",
   "packages/sdk-react-provider": "0.0.10",
   "packages/eslint-config": "0.0.0",
