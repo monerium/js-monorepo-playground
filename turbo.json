@@ -11,27 +11,27 @@
       "outputs": [".next/**", "!.next/cache/**", "dist/**"],
       "env": ["STANDALONE", "false"]
     },
-    "docs": {
-      "dependsOn": ["^build"],
+    "@monerium/sdk#docs": {
+      "dependsOn": ["@monerium/sdk#build"],
       "outputs": ["docs/generated/**"]
     },
-    "docs:watch": {
-      "dependsOn": ["^build"],
+    "@monerium/sdk#docs:watch": {
+      "dependsOn": ["@monerium/sdk#build"],
       "outputs": ["docs/generated/**"]
     },
     "lint": {},
     "lint:style": {},
     "prepublish": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     },
     "start": {
       "dependsOn": ["build"]
     },
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     },
     "test:watch": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["build"],
       "cache": false,
       "persistent": true
     }

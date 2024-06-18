@@ -23,6 +23,10 @@ const nextConfig = {
     }
     return config;
   },
+  experimental: {
+    //https://vercel.com/blog/how-we-optimized-package-imports-in-next-js#what's-the-problem-with-barrel-files
+    optimizePackageImports: ['@mui/material'],
+  },
 };
 
 const standaloneConfig = {
