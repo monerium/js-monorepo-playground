@@ -13,12 +13,10 @@
     ".": {
       "package-name": "monorepo",
       "exclude-paths": ["packages", "apps"],
-      "release-type": "node",
-      "prerelease-type": "beta",
-      "prerelease": true
+      "release-as": "0.0.5-beta.3",
+      "release-type": "node"
     },
     "apps/customer": {
-      "component": "web",
       "package-name": "customer",
       "release-type": "node"
     },
