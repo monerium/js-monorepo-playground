@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["main", "chore/release-please"]
+    branches: ["main"]
   pull_request:
     types: [opened, synchronize]
 
@@ -16,7 +16,6 @@ jobs:
         id: rp
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: chore/release-please
   release-values:
     name: "Release values"
     needs: [release-please]
