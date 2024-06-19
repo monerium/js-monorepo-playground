@@ -14,8 +14,7 @@
       "package-name": "monorepo",
       "exclude-paths": ["packages", "apps"],
       "prerelease-type": "beta",
-      "prerelease": true,
-      "release-as": "0.0.5-beta.1"
+      "prerelease": true
     },
     "apps/customer": {
       "package-name": "customer"
