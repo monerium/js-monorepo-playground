@@ -1,6 +1,6 @@
 {
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
-  "group-pull-request-title-pattern": ":rocket: release ${branch}",
+  "group-pull-request-title-pattern": "Release ${branch} :rocket:",
   "changelog-sections": [
     { "type": "feat", "section": "Features", "hidden": false },
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
