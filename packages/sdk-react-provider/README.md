@@ -1,5 +1,11 @@
 # Monerium SDK React Provider
 
+## Installation
+
+```sh
+pnpm add @monerium/sdk-react-provider
+```
+
 # Usage
 
 Wrap the application with the provider and pass the configuration as props.
