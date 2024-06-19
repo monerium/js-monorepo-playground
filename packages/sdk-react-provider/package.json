@@ -35,12 +35,14 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@monerium/sdk": "workspace:*",
+    "@monerium/sdk": "workspace:*"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.2.61",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.61",
     "@testing-library/dom": "^10.1.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0"
