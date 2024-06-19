@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.2-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.1-beta0...monorepo-v0.0.2-beta0) (2024-06-19)
+
+
+### Bug Fixes
+
+* changelog-types is now changelog-sections ([ac0203c](https://github.com/monerium/js-monorepo/commit/ac0203cadfef92bba909fb174a239e346e50ec29))
+* do not createanother PR for every release-please PR merged ([eaf3113](https://github.com/monerium/js-monorepo/commit/eaf31136d2727dc29f6c7ea44d7368bb8a34394a))
+
+
+### Miscellaneous
+
+* **gh-action:** adjust title pattern ([c81ace7](https://github.com/monerium/js-monorepo/commit/c81ace7623399b5f1f753d2e157d6155fde1fa2a))
+* release main ([d3fa1f4](https://github.com/monerium/js-monorepo/commit/d3fa1f4eb6165ede93dd7335072e5afc2c8df560))
+
 ## [0.0.1-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.1-beta0...monorepo-v0.0.1-beta0) (2024-06-19)
 
 
