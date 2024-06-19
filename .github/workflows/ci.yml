@@ -10,7 +10,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
-      data: ${{ steps.rp.outputs }}
+      data: ${{ toJson(steps.rp.outputs) }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: rp
