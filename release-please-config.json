@@ -15,31 +15,19 @@
       "exclude-paths": ["packages", "apps"]
     },
     "apps/customer": {
-      "package-name": "customer",
-      "release-as": "0.0.1-beta0"
+      "package-name": "customer"
     },
     "packages/sdk": {
       "package-name": "@monerium/sdk",
       "release-as": "2.12.1-beta0"
     },
     "packages/sdk-react-provider": {
-      "package-name": "@monerium/sdk-react-provider",
-      "release-as": "0.0.10-beta0"
+      "package-name": "@monerium/sdk-react-provider"
     },
-    "packages/eslint-config": {
-      "release-as": "0.0.1-beta0"
-    },
-    "packages/postcss-config": {
-      "release-as": "0.0.1-beta0"
-    },
-    "packages/stylelint-config": {
-      "release-as": "0.0.1-beta0"
-    },
-    "packages/typescript-config": {
-      "release-as": "0.0.1-beta0"
-    },
-    "packages/ui": {
-      "release-as": "0.0.1-beta0"
-    }
+    "packages/eslint-config": {},
+    "packages/postcss-config": {},
+    "packages/stylelint-config": {},
+    "packages/typescript-config": {},
+    "packages/ui": {}
   }
 }
