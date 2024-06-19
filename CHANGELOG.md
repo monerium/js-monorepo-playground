@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.3-beta0...monorepo-v0.0.4-beta0) (2024-06-19)
+
+
+### Miscellaneous
+
+* add release outputs ([08d5f33](https://github.com/monerium/js-monorepo/commit/08d5f3390b942361b5da527b7d7c499ed4483d8f))
+* adjust release version react provider ([74072bd](https://github.com/monerium/js-monorepo/commit/74072bd2f10c8d145a99c345a5e62f1fc738a2d4))
+
 ## [0.0.3-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.2-beta0...monorepo-v0.0.3-beta0) (2024-06-19)
 
 
