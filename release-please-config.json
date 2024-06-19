@@ -13,26 +13,41 @@
     ".": {
       "package-name": "monorepo",
       "exclude-paths": ["packages", "apps"],
-      "release-as": "0.0.5-beta.2"
+      "release-type": "node",
+      "prerelease-type": "beta",
+      "prerelease": true
     },
     "apps/customer": {
       "component": "web",
-      "package-name": "customer"
+      "package-name": "customer",
+      "release-type": "node"
     },
     "packages/sdk": {
       "package-name": "@monerium/sdk",
       "bump-minor-pre-major": true,
-      "release-as": "2.12.1-beta0"
+      "release-as": "2.12.1-beta0",
+      "release-type": "node"
     },
     "packages/sdk-react-provider": {
       "package-name": "@monerium/sdk-react-provider",
       "bump-minor-pre-major": true,
-      "release-as": "0.0.10-beta2"
+      "release-as": "0.0.10-beta2",
+      "release-type": "node"
     },
-    "packages/eslint-config": {},
-    "packages/postcss-config": {},
-    "packages/stylelint-config": {},
-    "packages/typescript-config": {},
-    "packages/ui": {}
+    "packages/eslint-config": {
+      "release-type": "node"
+    },
+    "packages/postcss-config": {
+      "release-type": "node"
+    },
+    "packages/stylelint-config": {
+      "release-type": "node"
+    },
+    "packages/typescript-config": {
+      "release-type": "node"
+    },
+    "packages/ui": {
+      "release-type": "node"
+    }
   }
 }
