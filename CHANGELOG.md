@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.5-beta.1](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.5-beta0...monorepo-v0.0.5-beta.1) (2024-06-19)
+
+
+### Miscellaneous
+
+* adjust prerelease to correct semver format ([97767e3](https://github.com/monerium/js-monorepo/commit/97767e380c3394c2c26b3c1a12408e1895b7a8f3))
+* adjust release outputs ([adc387d](https://github.com/monerium/js-monorepo/commit/adc387dfed1972daadaa2651f4d4ad22ef538485))
+
 ## [0.0.5-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.4-beta0...monorepo-v0.0.5-beta0) (2024-06-19)
 
 
