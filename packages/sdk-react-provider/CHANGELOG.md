@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.10-beta2](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10-beta1...sdk-react-provider-v0.0.10-beta2) (2024-06-19)
+
+
+### Documentation
+
+* update README ([8044580](https://github.com/monerium/js-monorepo/commit/804458074f45fbcc774cfa5a64d987b20d8e4b87))
+
 ## [0.0.10-beta1](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10-beta0...sdk-react-provider-v0.0.10-beta1) (2024-06-19)
 
 
