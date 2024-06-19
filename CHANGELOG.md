@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.1-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.1-beta0...monorepo-v0.0.1-beta0) (2024-06-19)
+
+
+### Bug Fixes
+
+* changelog-types is now changelog-sections ([ac0203c](https://github.com/monerium/js-monorepo/commit/ac0203cadfef92bba909fb174a239e346e50ec29))
+
 ## [0.0.1-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.2...monorepo-v0.0.1-beta0) (2024-06-19)
 
 
