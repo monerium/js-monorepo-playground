@@ -17,6 +17,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # target-branch: chore/my-please-release-testbranch
+
+      - name: echo values
+        run: |
+          echo "Release created: ${{ steps.rp.outputs.release_created }}"
+          echo "Release tag_name: ${{ steps.rp.outputs.tag_name }}"
+          echo "Release sha: ${{ steps.rp.outputs.sha }}"
   release-values:
     name: "Release values"
     needs: [release-please]

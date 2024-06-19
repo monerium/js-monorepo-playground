@@ -1,6 +1,6 @@
 {
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
-  "group-pull-request-title-pattern": "chore: release ${branch}",
+  "group-pull-request-title-pattern": ":rocket: release ${branch}",
   "changelog-sections": [
     { "type": "feat", "section": "Features", "hidden": false },
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
@@ -12,8 +12,7 @@
   "packages": {
     ".": {
       "package-name": "monorepo",
-      "exclude-paths": ["packages", "apps"],
-      "release-as": "0.0.1-beta0"
+      "exclude-paths": ["packages", "apps"]
     },
     "apps/customer": {
       "package-name": "customer",
