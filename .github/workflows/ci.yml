@@ -7,7 +7,27 @@ on:
     types: [opened, synchronize]
 
 jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      data: ${{ toJson(steps.rp.outputs) }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: rp
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+  release-values:
+    name: "Release values"
+    needs: [release-please]
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo outputs
+        run: |
+          echo "Release created: ${{ needs.release-please.outputs.data.release_created }}"
+          echo "Releases created: ${{ needs.release-please.outputs.data.releases_created }}"
+          echo "Release sha: ${{ needs.release-please.outputs.data.sha }}"
   build:
+    needs: [release-please]
     name: Build and Test
     timeout-minutes: 15
     runs-on: ubuntu-latest
@@ -43,3 +63,14 @@ jobs:
 
       - name: Test
         run: pnpm test
+
+      - name: PrePublish SDK
+        run: pnpm --filter @monerium/sdk pub:pre
+        if: ${{ needs.release-please.outputs.data['packages/sdk--release_created'] }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: PrePublish React Provider
+        run: pnpm --filter @monerium/sdk-react-provider pub:pre
+        if: ${{ needs.release-please.outputs.data['packages/sdk-react-provider--release_created'] }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
