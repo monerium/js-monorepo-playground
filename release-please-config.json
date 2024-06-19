@@ -12,7 +12,9 @@
   "packages": {
     ".": {
       "package-name": "monorepo",
-      "exclude-paths": ["packages", "apps"]
+      "exclude-paths": ["packages", "apps"],
+      "prerelease-type": "beta",
+      "prerelease": true
     },
     "apps/customer": {
       "package-name": "customer"
