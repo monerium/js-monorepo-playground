@@ -10,8 +10,8 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
-      release_created_sdk: ${{ steps.rp.outputs['@monerium/sdk--release_created'] }}
-      release_created_sdk_react_provider: ${{ steps.rp.outputs['@monerium/sdk-react-provider--release_created'] }}
+      release_created_sdk: ${{ steps.rp.outputs['packages/sdk--release_created'] }}
+      release_created_sdk_react_provider: ${{ steps.rp.outputs['packages/sdk-react-provider--release_created'] }}
       release_created: ${{ steps.rp.outputs.release_created }}
       releases_created: ${{ steps.rp.outputs.releases_created }}
       tag_name: ${{ steps.rp.outputs.tag_name }}
