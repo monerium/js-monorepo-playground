@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.2-beta0...monorepo-v0.0.3-beta0) (2024-06-19)
+
+
+### Miscellaneous
+
+* **gh-action:** fix outputs ([acabfc2](https://github.com/monerium/js-monorepo/commit/acabfc2aeba3b7011d11045954925d6c7198dd3d))
+
 ## [0.0.2-beta0](https://github.com/monerium/js-monorepo/compare/monorepo-v0.0.1-beta0...monorepo-v0.0.2-beta0) (2024-06-19)
 
 
