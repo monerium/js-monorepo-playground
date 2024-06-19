@@ -7,7 +7,27 @@ on:
     types: [opened, synchronize]
 
 jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      data: ${{ steps.rp.outputs }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: rp
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: chore/release-please
+  release-values:
+    name: "Release values"
+    needs: [release-please]
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo outputs
+        run: |
+          echo "Release created: ${{ needs.release-please.outputs.data.release_created }}"
+          echo "Release sha: ${{ needs.release-please.outputs.data.sha }}"
   build:
+    needs: [release-please]
     name: Build and Test
     timeout-minutes: 15
     runs-on: ubuntu-latest
@@ -43,6 +63,8 @@ jobs:
 
       - name: Test
         run: pnpm test
+        if: ${{ !needs.release-please.outputs.data.release_created }}
 
       - name: PrePublish
         run: pnpm pub:pre
+        if: ${{ needs.release-please.outputs.data.release_created }}
