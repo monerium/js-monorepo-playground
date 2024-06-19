@@ -25,6 +25,7 @@ jobs:
       - name: echo outputs
         run: |
           echo "Release created: ${{ needs.release-please.outputs.data.release_created }}"
+          echo "Releases created: ${{ needs.release-please.outputs.data.releases_created }}"
           echo "Release sha: ${{ needs.release-please.outputs.data.sha }}"
   build:
     needs: [release-please]
@@ -63,8 +64,19 @@ jobs:
 
       - name: Test
         run: pnpm test
-        if: ${{ !needs.release-please.outputs.data.release_created }}
 
       - name: PrePublish
         run: pnpm pub:pre
         if: ${{ needs.release-please.outputs.data.release_created }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: PrePublish React Provider
+        run: pnpm --filter @monerium/sdk-react-provider pub:pre
+        if: ${{ needs.release-please.outputs.data['packages/sdk-react-provider--release_created'] }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: PrePublish SDK
+        run: pnpm --filter @monerium/sdk pub:pre
+        if: ${{ needs.release-please.outputs.data['packages/sdk-react-provider--release_created'] }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
