@@ -6,11 +6,11 @@
     ".": {
       "package-name": "monorepo",
       "exclude-paths": ["packages", "apps"],
-      "release-as": "0.0.1"
+      "release-as": "0.0.1-beta0"
     },
     "apps/customer": {
       "package-name": "customer",
-      "release-as": "0.0.1"
+      "release-as": "0.0.1-beta0"
     },
     "packages/sdk": {
       "package-name": "@monerium/sdk",
@@ -21,25 +21,19 @@
       "release-as": "0.0.10-beta0"
     },
     "packages/eslint-config": {
-      "release-as": "0.0.1"
+      "release-as": "0.0.1-beta0"
     },
     "packages/postcss-config": {
-      "release-as": "0.0.1"
+      "release-as": "0.0.1-beta0"
     },
     "packages/stylelint-config": {
-      "release-as": "0.0.1"
+      "release-as": "0.0.1-beta0"
     },
     "packages/typescript-config": {
-      "release-as": "0.0.1"
+      "release-as": "0.0.1-beta0"
     },
     "packages/ui": {
-      "release-as": "0.0.1"
-    },
-    "packages/test": {
-      "package-name": "test"
-    },
-    "packages/test2": {
-      "package-name": "test2"
+      "release-as": "0.0.1-beta0"
     }
   }
 }
