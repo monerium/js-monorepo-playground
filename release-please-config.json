@@ -23,7 +23,7 @@
     "packages/sdk": {
       "package-name": "@monerium/sdk",
       "bump-minor-pre-major": true,
-      "release-as": "2.12.1-beta1",
+      "release-as": "2.12.1-beta.2",
       "release-type": "node"
     },
     "packages/sdk-react-provider": {
