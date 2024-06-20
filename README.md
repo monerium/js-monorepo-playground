@@ -13,7 +13,7 @@ This Turborepo includes the following packages/apps:
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/postcss-config`: `postcss` configurations
 - `@repo/stylelint-config`: `stylelint` configurations
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@repo/typescript-config`: `tsconfig.json`'s used throughout the monorepo
 
 ### Utilities
 
