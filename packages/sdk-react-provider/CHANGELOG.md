@@ -1,5 +1,45 @@
 # Changelog
 
+## [0.3.0](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.2.1...sdk-react-provider-v0.3.0) (2024-06-20)
+
+
+### Features
+
+* **sdk-react-provider:** export loadingAuth ([a265da2](https://github.com/monerium/js-monorepo-playground/commit/a265da24220e16c5c07490dbe313f5c65aef07f3))
+
+
+### Bug Fixes
+
+* add token types to sdk, + adjust data fetching sdk-provider ([f745348](https://github.com/monerium/js-monorepo-playground/commit/f745348e761372b146aae7d395c6574f30715dec))
+* cleanup ([ca0722f](https://github.com/monerium/js-monorepo-playground/commit/ca0722fde7eb03ee578ee0d228433af359b74fc2))
+
+
+### Documentation
+
+* update README ([8044580](https://github.com/monerium/js-monorepo-playground/commit/804458074f45fbcc774cfa5a64d987b20d8e4b87))
+* update README ([e6862d8](https://github.com/monerium/js-monorepo-playground/commit/e6862d833760a23ea845fb475d1fd51bf0c2b2ee))
+
+
+### Miscellaneous
+
+* add prepublish script ([7d8e225](https://github.com/monerium/js-monorepo-playground/commit/7d8e2250c6b5ce6ece34bc6e0e625a948f104b42))
+* add sdk and sdk-react-provider ([89c318a](https://github.com/monerium/js-monorepo-playground/commit/89c318af3a5948c7ab6616d9b59a7367f87457e4))
+* add stylelint ([5107d33](https://github.com/monerium/js-monorepo-playground/commit/5107d33d79aec11219baef973767295622337721))
+* adjust npmrc and add minor change to trigger publish ([a32680e](https://github.com/monerium/js-monorepo-playground/commit/a32680e32a3b933bc5aefd5cb8eceb2d409ef312))
+* auto sort import + prettier ([69ace9d](https://github.com/monerium/js-monorepo-playground/commit/69ace9d62af48fb501e298af804a1703e9928d86))
+* cleanup ([4a46c4c](https://github.com/monerium/js-monorepo-playground/commit/4a46c4c6ed7e651418376609f9efa1353c0b2840))
+* force new release sdk-react-provider ([382d968](https://github.com/monerium/js-monorepo-playground/commit/382d96823976d34071b02aabc834cf582c099d02))
+* publish should work now, preparing for new versions of sdk and sdk-react-provider ([7e93031](https://github.com/monerium/js-monorepo-playground/commit/7e930313fb54636afb71cd69d7ab860ed571ea6d))
+* release main ([405df40](https://github.com/monerium/js-monorepo-playground/commit/405df40d8f15f36af7fea87a939392da010a535e))
+* release main ([5eed941](https://github.com/monerium/js-monorepo-playground/commit/5eed941e5db57c14c297f8f63b35d59c1742ed50))
+* **sdk-react-provider:** fix deps ([a2ce8f9](https://github.com/monerium/js-monorepo-playground/commit/a2ce8f93b8a5aa9d015d9ec2158b84ad1aac57ae))
+* switch to npm ([3c07134](https://github.com/monerium/js-monorepo-playground/commit/3c07134e148e96df0fad519dde97b64cc5a12e33))
+* try adding npmrc to the root of every package, pnpm publish is failing in ci ([33cdd57](https://github.com/monerium/js-monorepo-playground/commit/33cdd57dedf4d6d73baeeb4222856a1c825c0e28))
+* update packes packagejson + cleanup ([71ac566](https://github.com/monerium/js-monorepo-playground/commit/71ac5662b4604154ecdd1d560ae1201aa852eb0e))
+* wip commitlint ([6812fb2](https://github.com/monerium/js-monorepo-playground/commit/6812fb2c1ac0197a1531705f7c3285b8700a747f))
+* wip test ([e10ee82](https://github.com/monerium/js-monorepo-playground/commit/e10ee826724348e2602775ffb4a5dca2cf61271b))
+* working tests for sdk + remove network ([086d856](https://github.com/monerium/js-monorepo-playground/commit/086d8561a8a2a61c884c50f63488327a6a2a5574))
+
 ## [0.2.1](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.2.0...sdk-react-provider-v0.2.1) (2024-06-20)
 
 
