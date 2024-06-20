@@ -13,7 +13,7 @@
     ".": {
       "package-name": "monorepo",
       "exclude-paths": ["packages", "apps"],
-      "release-as": "0.0.5-beta.3",
+      "release-as": "0.0.6",
       "release-type": "node"
     },
     "apps/customer": {
@@ -23,13 +23,13 @@
     "packages/sdk": {
       "package-name": "@monerium/sdk",
       "bump-minor-pre-major": true,
-      "release-as": "2.12.1-beta.2",
+      "release-as": "2.12.1-beta.3",
       "release-type": "node"
     },
     "packages/sdk-react-provider": {
       "package-name": "@monerium/sdk-react-provider",
       "bump-minor-pre-major": true,
-      "release-as": "0.0.10-beta2",
+      "release-as": "0.0.10-beta.3",
       "release-type": "node"
     },
     "packages/eslint-config": {
