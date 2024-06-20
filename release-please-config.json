@@ -3,7 +3,12 @@
   "pull-request-title-pattern": "Packages depending on recent release",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
   "separate-pull-requests": true,
-  "plugins": ["node-workspace"],
+  "plugins": [
+    {
+      "type": "node-workspace",
+      "pull-request-title-pattern": "Packages depending on recent release"
+    }
+  ],
   "changelog-sections": [
     { "type": "feat", "section": "Features", "hidden": false },
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
