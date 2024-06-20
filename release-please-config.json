@@ -14,7 +14,7 @@
   ],
   "packages": {
     ".": {
-      "pull-request-title-pattern": "Packages depending on recent release",
+      "pull-request-title-pattern": "Packages depending on recent release"
     },
     "apps/customer": { 
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
