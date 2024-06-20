@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.3.0...sdk-react-provider-v0.3.1) (2024-06-20)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @monerium/sdk bumped to 2.14.2
+
 ## [0.3.0](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.2.1...sdk-react-provider-v0.3.0) (2024-06-20)
 
 
