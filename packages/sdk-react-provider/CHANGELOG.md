@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.4.1...sdk-react-provider-v0.4.2) (2024-06-20)
+
+
+### Miscellaneous
+
+* react-provider ([329a019](https://github.com/monerium/js-monorepo-playground/commit/329a01946d120449a45cfc284d8308f795f12947))
+
 ## [0.4.1](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.4.0...sdk-react-provider-v0.4.1) (2024-06-20)
 
 
