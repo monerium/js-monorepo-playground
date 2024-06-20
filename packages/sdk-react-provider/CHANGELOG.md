@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.3.0...sdk-react-provider-v0.3.1) (2024-06-20)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @monerium/sdk bumped to 2.14.2
+
 ## [0.3.0](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.2.1...sdk-react-provider-v0.3.0) (2024-06-20)
 
 
@@ -29,6 +38,7 @@
 * auto sort import + prettier ([69ace9d](https://github.com/monerium/js-monorepo-playground/commit/69ace9d62af48fb501e298af804a1703e9928d86))
 * cleanup ([4a46c4c](https://github.com/monerium/js-monorepo-playground/commit/4a46c4c6ed7e651418376609f9efa1353c0b2840))
 * force new release sdk-react-provider ([382d968](https://github.com/monerium/js-monorepo-playground/commit/382d96823976d34071b02aabc834cf582c099d02))
+* new version for sdk-react-provider please ([74d7dd0](https://github.com/monerium/js-monorepo-playground/commit/74d7dd0c18a42b067b0fff45bdef762d8c6493be))
 * publish should work now, preparing for new versions of sdk and sdk-react-provider ([7e93031](https://github.com/monerium/js-monorepo-playground/commit/7e930313fb54636afb71cd69d7ab860ed571ea6d))
 * release main ([405df40](https://github.com/monerium/js-monorepo-playground/commit/405df40d8f15f36af7fea87a939392da010a535e))
 * release main ([5eed941](https://github.com/monerium/js-monorepo-playground/commit/5eed941e5db57c14c297f8f63b35d59c1742ed50))

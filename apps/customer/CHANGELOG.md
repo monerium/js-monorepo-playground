@@ -28,6 +28,7 @@
 * auto sort import + prettier ([69ace9d](https://github.com/monerium/js-monorepo-playground/commit/69ace9d62af48fb501e298af804a1703e9928d86))
 * connect wallet btn and cleanup ([1715676](https://github.com/monerium/js-monorepo-playground/commit/1715676f172134f7171585b3ff81720d7a81296a))
 * publish should work now, preparing for new versions of sdk and sdk-react-provider ([7e93031](https://github.com/monerium/js-monorepo-playground/commit/7e930313fb54636afb71cd69d7ab860ed571ea6d))
+* release main ([442c263](https://github.com/monerium/js-monorepo-playground/commit/442c263553aca1a903da32bb02b2979e815cd738))
 * release main ([405df40](https://github.com/monerium/js-monorepo-playground/commit/405df40d8f15f36af7fea87a939392da010a535e))
 * release main ([5eed941](https://github.com/monerium/js-monorepo-playground/commit/5eed941e5db57c14c297f8f63b35d59c1742ed50))
 * remove beta from all package versions ([62e6af3](https://github.com/monerium/js-monorepo-playground/commit/62e6af37cfc6c6bd288bb1609719122bb5954ad0))
@@ -44,7 +45,8 @@
 
 * The following workspace dependencies were updated
   * devDependencies
-    * @monerium/sdk-react-provider bumped to 0.3.0
+    * @monerium/sdk bumped to 2.14.2
+    * @monerium/sdk-react-provider bumped to 0.3.1
 
 ## [0.1.1](https://github.com/monerium/js-monorepo-playground/compare/customer-v0.1.0...customer-v0.1.1) (2024-06-20)
 
