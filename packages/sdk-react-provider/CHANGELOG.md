@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.1.0](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10...sdk-react-provider-v0.1.0) (2024-06-20)
+
+
+### Features
+
+* **sdk-react-provider:** export loadingAuth ([a265da2](https://github.com/monerium/js-monorepo/commit/a265da24220e16c5c07490dbe313f5c65aef07f3))
+
+
+### Bug Fixes
+
+* add token types to sdk, + adjust data fetching sdk-provider ([f745348](https://github.com/monerium/js-monorepo/commit/f745348e761372b146aae7d395c6574f30715dec))
+* cleanup ([ca0722f](https://github.com/monerium/js-monorepo/commit/ca0722fde7eb03ee578ee0d228433af359b74fc2))
+
+
+### Documentation
+
+* update README ([8044580](https://github.com/monerium/js-monorepo/commit/804458074f45fbcc774cfa5a64d987b20d8e4b87))
+* update README ([e6862d8](https://github.com/monerium/js-monorepo/commit/e6862d833760a23ea845fb475d1fd51bf0c2b2ee))
+
+
+### Miscellaneous
+
+* add stylelint ([5107d33](https://github.com/monerium/js-monorepo/commit/5107d33d79aec11219baef973767295622337721))
+* auto sort import + prettier ([69ace9d](https://github.com/monerium/js-monorepo/commit/69ace9d62af48fb501e298af804a1703e9928d86))
+* **sdk-react-provider:** fix deps ([a2ce8f9](https://github.com/monerium/js-monorepo/commit/a2ce8f93b8a5aa9d015d9ec2158b84ad1aac57ae))
+* working tests for sdk + remove network ([086d856](https://github.com/monerium/js-monorepo/commit/086d8561a8a2a61c884c50f63488327a6a2a5574))
+
 ## [0.0.10](https://github.com/monerium/public-monorepo/compare/sdk-react-provider-v0.0.9...sdk-react-provider-v0.0.10) (2023-11-17)
 
 ### Bug Fixes

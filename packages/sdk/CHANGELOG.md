@@ -1,5 +1,35 @@
 # Changelog
 
+## [2.13.0](https://github.com/monerium/js-monorepo/compare/sdk-v2.12.1...sdk-v2.13.0) (2024-06-20)
+
+
+### Features
+
+* **sdk-react-provider:** export loadingAuth ([a265da2](https://github.com/monerium/js-monorepo/commit/a265da24220e16c5c07490dbe313f5c65aef07f3))
+* **sdk:** opening auth flow should not replace history location, just push it ([21a7a07](https://github.com/monerium/js-monorepo/commit/21a7a07e26c2e9a469980165885436e19b888770))
+
+
+### Bug Fixes
+
+* add token types to sdk, + adjust data fetching sdk-provider ([f745348](https://github.com/monerium/js-monorepo/commit/f745348e761372b146aae7d395c6574f30715dec))
+* docs for constants ([515ec2a](https://github.com/monerium/js-monorepo/commit/515ec2ae63f91c2d4c94739f8890ac37fdab4e7a))
+* landing page not rerouting with valid refresh token ([1eb3391](https://github.com/monerium/js-monorepo/commit/1eb3391b2ba944121f8e73a50dfa6b61262375f2))
+* **sdk:** reduce usage of network ([ccddeaf](https://github.com/monerium/js-monorepo/commit/ccddeafc72d800143d24d4e4079de76a955ed0fb))
+
+
+### Documentation
+
+* update ([80a85dd](https://github.com/monerium/js-monorepo/commit/80a85ddfbe6e3fd746c707f0eec33f21c4d00bb7))
+
+
+### Miscellaneous
+
+* auto sort import + prettier ([69ace9d](https://github.com/monerium/js-monorepo/commit/69ace9d62af48fb501e298af804a1703e9928d86))
+* enhance docs ([95da1ee](https://github.com/monerium/js-monorepo/commit/95da1ee68c22ee2a6c87ac928b307c8f3825242a))
+* markdown typedoc ([69aafbf](https://github.com/monerium/js-monorepo/commit/69aafbf665e06fb1fab9775ca5ee0ba5fb9dbc84))
+* **sdk:** add decleration maps ([dd13bbf](https://github.com/monerium/js-monorepo/commit/dd13bbf17909aedb97df8e2ee693b034efb230c9))
+* update docs ([ec7249b](https://github.com/monerium/js-monorepo/commit/ec7249bd7316a7137c1991a68930b69e0cfc24b1))
+
 ## [2.12.0](https://github.com/monerium/js-sdk/compare/sdk-v2.11.1...sdk-v2.12.0) (2024-03-12)
 
 ### Bug Fixes
