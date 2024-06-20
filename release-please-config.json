@@ -16,7 +16,7 @@
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
       "package-name": "customer",
       "release-type": "node",
-      "bump-minor-pre-major": true,
+      "bump-minor-pre-major": true
     },
     "packages/sdk": {
       "separate-pull-requests": true,
