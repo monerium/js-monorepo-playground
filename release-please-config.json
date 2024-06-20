@@ -10,6 +10,9 @@
       "pull-request-title-pattern": "Packages depending on recent release"
     }
   ],
+  "changelog-sections": [
+      { "type": "chore", "section": "Miscellaneous", "hidden": true },
+  ],
   "packages": {
     "apps/customer": { 
       "group-pull-request-title-pattern": "Release ${branch} :rocket:",
