@@ -11,13 +11,13 @@
     }
   ],
   "changelog-sections": [
-      { "type": "chore", "section": "Miscellaneous", "hidden": true },
+      { "type": "chore", "section": "Miscellaneous", "hidden": true }
   ],
   "packages": {
     "apps/customer": { 
       "group-pull-request-title-pattern": "Release ${branch} :rocket:",
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
-      "package-name": "customer",
+      "package-name": "pack-customer",
       "release-type": "node",
       "bump-minor-pre-major": true,
       "component": "customer",
