@@ -97,7 +97,7 @@ API documentation:
 
 > Authorization Code Flow with PKCE is used for apps where direct user interaction is involved, and the application is running on an environment where the confidentiality of a secret cannot be safely maintained. It allows the application to authorize users without handling their passwords and mitigates the additional risk involved in this sort of delegation.
 
-First you have to navigate the user to the Monerium authentication flow. This can be done by generating a URL and redirecting the user to it. After the user has authenticated, Monerium will redirect back to your specified URI with a code. You can then finalize the authentication process by exchanging the code for access and refresh tokens.
+First, you have to navigate the user to the Monerium authentication flow. This can be done by generating a URL and redirecting the user to it. After the user has authenticated, Monerium will redirect back to your specified URI with a code. You can then finalize the authentication process by exchanging the code for access and refresh tokens.
 
 ```ts
 import { MoneriumClient } from '@monerium/sdk';

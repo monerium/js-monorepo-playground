@@ -107,3 +107,9 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+# FAQ
+
+## I merged a release PR, but it immediately opened a new PR for the same release.
+
+Verify that the package version is not set to a specific version with `"release-as"` in the `release-please-config.json` file. If it is, remove it and merge the PR again.
