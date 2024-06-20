@@ -2,7 +2,9 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+      #- chore/my-please-release-testbranch
   pull_request:
     types: [opened, synchronize]
 
@@ -14,6 +16,7 @@ jobs:
       release_created_sdk_react_provider: ${{ steps.release.outputs['packages/sdk-react-provider--release_created'] }}
       release_created: ${{ steps.release.outputs.release_created }}
       releases_created: ${{ steps.release.outputs.releases_created }}
+      pr_created: ${{ steps.release.outputs.prs_created }}
       tag_name: ${{ steps.release.outputs.tag_name }}
       sha: ${{ steps.release.outputs.sha }}
     steps:
@@ -28,53 +31,22 @@ jobs:
           echo "Release created SDK: ${{ steps.release.outputs['packages/sdk--release_created']  }}"
           echo "Release created React Provider: ${{ steps.release.outputs['packages/sdk-react-provider--release_created'] }}"
           echo "Releases created: ${{ steps.release.outputs.releases_created }}"
-          echo "Release created: ${{ steps.release.outputs.release_created }}"
+          echo "PR created: ${{ steps.release.outputs.prs_created }}"
           echo "Release tag_name: ${{ steps.release.outputs.tag_name }}"
           echo "Release sha: ${{ steps.release.outputs.sha }}"
-  release-values:
-    name: "Release values"
-    needs: [release-please]
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo outputs
-        run: |
-          echo "Release created: ${{ needs.release-please.outputs.release_created }}"
-          echo "Releases created: ${{ needs.release-please.outputs.releases_created }}"
-          echo "Release created SDK: ${{ needs.release-please.outputs.release_created_sdk }}"
-          echo "Release created React: ${{ needs.release-please.outputs.release_created_sdk_react_provider }}"
-          echo "Release sha: ${{ needs.release-please.outputs.sha }}"
   build:
     needs: [release-please]
-    name: Build and Test
+    name: Build, Test, Lint and Publish
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    if: ${{ needs.release-please.outputs.release_created }}
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - name: Cache turbo build setup
-        uses: actions/cache@v4
-        with:
-          path: .turbo
-          key: ${{ runner.os }}-turbo-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-turbo-
 
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "pnpm"
-
-      - name: Install dependencies
-        run: pnpm install
+      - name: Cache PNPM install and Turbo
+        uses: ./.github/actions/cache-setup
 
       - name: Build
         run: pnpm build
@@ -82,15 +54,19 @@ jobs:
       - name: Test
         run: pnpm test
 
+      - name: Lint
+        run: pnpm lint
+
       - name: PrePublish SDK
-        run: pnpm --filter @monerium/sdk pub:pre
-        # run: pnpm --filter @monerium/sdk publish --access public
+        #run: pnpm --filter @monerium/sdk pub:pre
+        run: pnpm --filter @monerium/sdk publish --access public
         if: ${{ needs.release-please.outputs.release_created_sdk }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
       - name: PrePublish React Provider
-        run: pnpm --filter @monerium/sdk-react-provider pub:pre
-        # run: pnpm --filter @monerium/sdk-react-provider publish --access public
+        # run: pnpm --filter @monerium/sdk-react-provider pub:pre
+        run: pnpm --filter @monerium/sdk-react-provider publish --access public
         if: ${{ needs.release-please.outputs.release_created_sdk_react_provider }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
