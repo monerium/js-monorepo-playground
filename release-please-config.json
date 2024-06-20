@@ -18,27 +18,30 @@
     { "type": "revert", "section": "Revert", "hidden": false }
   ],
   "packages": {
-    ".": {
-      "pull-request-title-pattern": "Packages depending on recent release"
-    },
     "apps/customer": { 
+      "group-pull-request-title-pattern": "Release ${branch} :rocket:",
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
       "package-name": "customer",
       "release-type": "node",
-      "bump-minor-pre-major": true
+      "bump-minor-pre-major": true,
+      "component": "customer"
     },
     "packages/sdk": {
+      "group-pull-request-title-pattern": "Release ${branch} :rocket:",
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
       "release-type": "node",
       "bump-minor-pre-major": true,
-      "package-name": "@monerium/sdk"
+      "package-name": "@monerium/sdk",
+      "component": "customer"
     },
     "packages/sdk-react-provider": {
+      "group-pull-request-title-pattern": "Release ${branch} :rocket:",
       "pull-request-header": ":warning: Make sure to also update the SDK package! :warning:",
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
       "release-type": "node",
       "bump-minor-pre-major": true,
-      "package-name": "@monerium/sdk-react-provider"
+      "package-name": "@monerium/sdk-react-provider",
+      "component": "customer"
     }
   }
 }
