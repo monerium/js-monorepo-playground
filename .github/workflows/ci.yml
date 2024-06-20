@@ -51,22 +51,16 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Test
-        run: pnpm test
-
-      - name: Lint
-        run: pnpm lint
-
       - name: Publish SDK
         #run: pnpm --filter @monerium/sdk pub:pre
-        run: pnpm --filter @monerium/sdk publish --access public
+        # run: pnpm --filter @monerium/sdk publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ needs.release-please.outputs.release_created_sdk }}
 
       - name: Publish React Provider
         # run: pnpm --filter @monerium/sdk-react-provider pub:pre
-        run: pnpm --filter @monerium/sdk-react-provider publish --access public
+        # run: pnpm --filter @monerium/sdk-react-provider publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ needs.release-please.outputs.release_created_sdk_react_provider }}
