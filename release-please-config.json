@@ -3,19 +3,12 @@
   "pull-request-title-pattern": "Packages depending on recent release",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
   "separate-pull-requests": true,
+  "always-link-local": true,
   "plugins": [
     {
       "type": "node-workspace",
       "pull-request-title-pattern": "Packages depending on recent release"
     }
-  ],
-  "changelog-sections": [
-    { "type": "feat", "section": "Features", "hidden": false },
-    { "type": "fix", "section": "Bug Fixes", "hidden": false },
-    { "type": "docs", "section": "Documentation", "hidden": false },
-    { "type": "chore", "section": "Miscellaneous", "hidden": false },
-    { "type": "refactor", "section": "Refactors", "hidden": false },
-    { "type": "revert", "section": "Revert", "hidden": false }
   ],
   "packages": {
     "apps/customer": { 
@@ -24,7 +17,15 @@
       "package-name": "customer",
       "release-type": "node",
       "bump-minor-pre-major": true,
-      "component": "customer"
+      "component": "customer",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features", "hidden": false },
+        { "type": "fix", "section": "Bug Fixes", "hidden": false },
+        { "type": "docs", "section": "Documentation", "hidden": false },
+        { "type": "chore", "section": "Miscellaneous", "hidden": false },
+        { "type": "refactor", "section": "Refactors", "hidden": false },
+        { "type": "revert", "section": "Revert", "hidden": false }
+      ],
     },
     "packages/sdk": {
       "group-pull-request-title-pattern": "Release ${branch} :rocket:",
@@ -32,7 +33,15 @@
       "release-type": "node",
       "bump-minor-pre-major": true,
       "package-name": "@monerium/sdk",
-      "component": "sdk"
+      "component": "sdk",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features", "hidden": false },
+        { "type": "fix", "section": "Bug Fixes", "hidden": false },
+        { "type": "docs", "section": "Documentation", "hidden": false },
+        { "type": "chore", "section": "Miscellaneous", "hidden": false },
+        { "type": "refactor", "section": "Refactors", "hidden": false },
+        { "type": "revert", "section": "Revert", "hidden": false }
+      ],
     },
     "packages/sdk-react-provider": {
       "group-pull-request-title-pattern": "Release ${branch} :rocket:",
@@ -41,7 +50,15 @@
       "release-type": "node",
       "bump-minor-pre-major": true,
       "package-name": "@monerium/sdk-react-provider",
-      "component": "sdk-react-provider"
+      "component": "sdk-react-provider",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features", "hidden": false },
+        { "type": "fix", "section": "Bug Fixes", "hidden": false },
+        { "type": "docs", "section": "Documentation", "hidden": false },
+        { "type": "chore", "section": "Miscellaneous", "hidden": false },
+        { "type": "refactor", "section": "Refactors", "hidden": false },
+        { "type": "revert", "section": "Revert", "hidden": false }
+      ],
     }
   }
 }
