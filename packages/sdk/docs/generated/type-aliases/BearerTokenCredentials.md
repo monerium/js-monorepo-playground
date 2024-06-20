@@ -1,8 +1,8 @@
-[**Monerium SDK v2.12.1-beta0**](../README.md) • **Docs**
+[**Monerium SDK v2.13.0**](../README.md) • **Docs**
 
 ---
 
-[Monerium SDK v2.12.1-beta0](../README.md) / BearerTokenCredentials
+[Monerium SDK v2.13.0](../README.md) / BearerTokenCredentials
 
 # Type alias: BearerTokenCredentials
 
@@ -10,4 +10,4 @@
 
 ## Source
 
-[types.ts:502](https://github.com/monerium/js-monorepo/blob/5652214d02f5add3c0253df8e24a10c8f67836ad/packages/sdk/src/types.ts#L502)
+[types.ts:502](https://github.com/monerium/js-monorepo/blob/4397cd6d6b171e9f3bbb7c9a2278e6782b814c1a/packages/sdk/src/types.ts#L502)
