@@ -1,58 +1,5 @@
 # Changelog
 
-## [0.0.10-beta.4](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10-beta.3...sdk-react-provider-v0.0.10-beta.4) (2024-06-20)
-
-
-### Miscellaneous
-
-* adjust npmrc and add minor change to trigger publish ([a32680e](https://github.com/monerium/js-monorepo/commit/a32680e32a3b933bc5aefd5cb8eceb2d409ef312))
-
-## [0.0.10-beta.3](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10-beta2...sdk-react-provider-v0.0.10-beta.3) (2024-06-20)
-
-
-### Miscellaneous
-
-* try adding npmrc to the root of every package, pnpm publish is failing in ci ([33cdd57](https://github.com/monerium/js-monorepo/commit/33cdd57dedf4d6d73baeeb4222856a1c825c0e28))
-
-## [0.0.10-beta2](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10-beta1...sdk-react-provider-v0.0.10-beta2) (2024-06-19)
-
-
-### Documentation
-
-* update README ([8044580](https://github.com/monerium/js-monorepo/commit/804458074f45fbcc774cfa5a64d987b20d8e4b87))
-
-## [0.0.10-beta1](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10-beta0...sdk-react-provider-v0.0.10-beta1) (2024-06-19)
-
-
-### Documentation
-
-* update README ([e6862d8](https://github.com/monerium/js-monorepo/commit/e6862d833760a23ea845fb475d1fd51bf0c2b2ee))
-
-
-### Miscellaneous
-
-* **sdk-react-provider:** fix deps ([a2ce8f9](https://github.com/monerium/js-monorepo/commit/a2ce8f93b8a5aa9d015d9ec2158b84ad1aac57ae))
-
-## [0.0.10-beta0](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10-beta0...sdk-react-provider-v0.0.10-beta0) (2024-06-19)
-
-
-### Miscellaneous
-
-* **sdk-react-provider:** fix deps ([a2ce8f9](https://github.com/monerium/js-monorepo/commit/a2ce8f93b8a5aa9d015d9ec2158b84ad1aac57ae))
-
-## [0.0.10-beta0](https://github.com/monerium/js-monorepo/compare/sdk-react-provider-v0.0.10...sdk-react-provider-v0.0.10-beta0) (2024-06-19)
-
-
-### Features
-
-* **sdk-react-provider:** export loadingAuth ([a265da2](https://github.com/monerium/js-monorepo/commit/a265da24220e16c5c07490dbe313f5c65aef07f3))
-
-
-### Bug Fixes
-
-* add token types to sdk, + adjust data fetching sdk-provider ([f745348](https://github.com/monerium/js-monorepo/commit/f745348e761372b146aae7d395c6574f30715dec))
-* cleanup ([ca0722f](https://github.com/monerium/js-monorepo/commit/ca0722fde7eb03ee578ee0d228433af359b74fc2))
-
 ## [0.0.10](https://github.com/monerium/public-monorepo/compare/sdk-react-provider-v0.0.9...sdk-react-provider-v0.0.10) (2023-11-17)
 
 ### Bug Fixes
