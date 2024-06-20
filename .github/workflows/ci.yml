@@ -57,16 +57,16 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - name: PrePublish SDK
+      - name: Publish SDK
         #run: pnpm --filter @monerium/sdk pub:pre
         run: pnpm --filter @monerium/sdk publish --access public
-        if: ${{ needs.release-please.outputs.release_created_sdk }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ needs.release-please.outputs.release_created_sdk }}
 
-      - name: PrePublish React Provider
+      - name: Publish React Provider
         # run: pnpm --filter @monerium/sdk-react-provider pub:pre
         run: pnpm --filter @monerium/sdk-react-provider publish --access public
-        if: ${{ needs.release-please.outputs.release_created_sdk_react_provider }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ needs.release-please.outputs.release_created_sdk_react_provider }}

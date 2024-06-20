@@ -59,7 +59,7 @@ yarn add @monerium/sdk
 
 ## Usage Examples
 
-We recommend starting in the [Developer Portal](https://monerium.dev/docs/welcome). There you will learn more about `client_id`'s and ways of authenticating.
+We recommend starting in the [Developer Portal](https://monerium.dev/docs/welcome). There, you will learn more about `client_id`'s and ways of authenticating.
 
 #### Initialize and authenticate using Client Credentials
 
