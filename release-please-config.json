@@ -13,6 +13,9 @@
     { "type": "revert", "section": "Revert", "hidden": false }
   ],
   "packages": {
+    ".": {
+      "pull-request-title-pattern": "Packages depending on recent release",
+    },
     "apps/customer": { 
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
       "package-name": "customer",
