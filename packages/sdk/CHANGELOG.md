@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.3](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.14.2...sdk-v2.14.3) (2024-06-21)
+
+
+### Miscellaneous
+
+* update sdk ([e82d4ea](https://github.com/monerium/js-monorepo-playground/commit/e82d4eab026af8e949c04277239e9b40a4e98d9e))
+
 ## [2.14.2](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.14.1...sdk-v2.14.2) (2024-06-20)
 
 
