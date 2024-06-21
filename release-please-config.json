@@ -1,8 +1,7 @@
 {
   "group-pull-request-title-pattern": "Release ${branch} :rocket:",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
-  "separate-pull-requests": false,
-  "plugins": ["node-workspace"],
+  "separate-pull-requests": true,
   "changelog-sections": [
     { "type": "feat", "section": "Features", "hidden": false },
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
