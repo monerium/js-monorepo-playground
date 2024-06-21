@@ -1,5 +1,5 @@
 import type { Config } from './types';
-
+// STUFF
 const MONERIUM_CONFIG: Config = {
   environments: {
     production: {
