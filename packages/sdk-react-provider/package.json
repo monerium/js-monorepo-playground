@@ -5,7 +5,7 @@
   "description": "React provider for the Monerium SDK.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/monerium/js-monorepo.git",
+    "url": "https://github.com/monerium/js-monorepo-playground.git",
     "directory": "packages/sdk-react-provider"
   },
   "bugs": {
