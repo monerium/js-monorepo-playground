@@ -24,7 +24,8 @@
       "package-name": "customer"
     },
     "packages/sdk": {
-      "package-name": "@monerium/sdk"
+      "package-name": "@monerium/sdk",
+      "release-as": "2.15.4"
     },
     "packages/sdk-react-provider": {
       "package-name": "@monerium/sdk-react-provider"
