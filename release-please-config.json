@@ -5,7 +5,7 @@
   "plugins": [
     {
       "type": "node-workspace",
-      "merge": false,
+      "merge": false
     }
   ],
   "changelog-sections": [
