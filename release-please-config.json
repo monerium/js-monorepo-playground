@@ -1,5 +1,6 @@
 {
   "bootstrap-sha": "32f995cdb7ed885851345fae0dd6caad907b4223",
+  "pull-request-title-pattern": ":rocket: release ${component} ${version}",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
   "separate-pull-requests": true,
   "plugins": [
@@ -20,15 +21,12 @@
   "bump-minor-pre-major": true,
   "packages": {
     "apps/customer": { 
-      "pull-request-title-pattern": ":rocket: Release customer ${version}",
       "package-name": "customer"
     },
     "packages/sdk": {
-      "pull-request-title-pattern": ":rocket: Release sdk ${version}",
       "package-name": "@monerium/sdk"
     },
     "packages/sdk-react-provider": {
-      "pull-request-title-pattern": ":rocket: Release react provider ${version}",
       "package-name": "@monerium/sdk-react-provider"
     }
   },
