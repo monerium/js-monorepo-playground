@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.6](https://github.com/monerium/js-monorepo-playground/compare/customer-v0.5.5...customer-v0.5.6) (2024-06-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @monerium/sdk bumped to 2.15.6
+    * @monerium/sdk-react-provider bumped to 0.7.5
+
 ## [0.5.5](https://github.com/monerium/js-monorepo-playground/compare/customer-v0.5.4...customer-v0.5.5) (2024-06-21)
 
 

@@ -1,5 +1,5 @@
 {
-  "apps/customer": "0.5.5",
-  "packages/sdk": "2.15.5",
-  "packages/sdk-react-provider": "0.7.4"
+  "apps/customer": "0.5.6",
+  "packages/sdk": "2.15.6",
+  "packages/sdk-react-provider": "0.7.5"
 }
