@@ -2,7 +2,8 @@ name: CI
 
 on:
   push:
-    branches-ignore: release-please-*
+    branches-ignore:
+      - release-please*
   pull_request:
     types: [opened, synchronize]
 
