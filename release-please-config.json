@@ -20,12 +20,14 @@
   "packages": {
     "apps/customer": { 
       "package-name": "customer"
+      "release-as": "0.5.2"
     },
     "packages/sdk": {
       "package-name": "@monerium/sdk"
     },
     "packages/sdk-react-provider": {
-      "package-name": "@monerium/sdk-react-provider"
+      "package-name": "@monerium/sdk-react-provider",
+      "release-as": "0.6.2"
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/v16.10.2/schemas/config.json"
