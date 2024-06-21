@@ -19,7 +19,7 @@
   "bump-minor-pre-major": true,
   "packages": {
     "apps/customer": { 
-      "package-name": "customer"
+      "package-name": "customer",
       "release-as": "0.5.2"
     },
     "packages/sdk": {
