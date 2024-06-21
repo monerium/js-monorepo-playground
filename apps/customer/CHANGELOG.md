@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.5](https://github.com/monerium/js-monorepo-playground/compare/customer-v0.5.4...customer-v0.5.5) (2024-06-21)
+
+
+### Miscellaneous
+
+* release main ([09fc43f](https://github.com/monerium/js-monorepo-playground/commit/09fc43faf6cc608b084600589ae1a8e7c035390e))
+
 ## [0.5.4](https://github.com/monerium/js-monorepo-playground/compare/customer-v0.5.4...customer-v0.5.4) (2024-06-21)
 
 
