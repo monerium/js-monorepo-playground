@@ -20,7 +20,6 @@
   ],
   "packages": {
     "apps/customer": { 
-      "separate-pull-requests": true,
       "group-pull-request-title-pattern": "Release ${branch} :rocket:",
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
       "package-name": "pack-customer",
@@ -29,7 +28,6 @@
       "component": "customer"
     },
     "packages/sdk": {
-      "separate-pull-requests": true,
       "group-pull-request-title-pattern": "Release ${branch} :rocket:",
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
       "release-type": "node",
@@ -38,7 +36,6 @@
       "component": "sdk"
     },
     "packages/sdk-react-provider": {
-      "separate-pull-requests": true,
       "group-pull-request-title-pattern": "Release ${branch} :rocket:",
       "pull-request-header": ":warning: Make sure to also update the SDK package! :warning:",
       "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
