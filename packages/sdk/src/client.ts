@@ -312,6 +312,10 @@ export class MoneriumClient {
     return this.#api<Order>('get', `orders/${orderId}`);
   }
 
+  getStuffidyStuff(orderId: string): Promise<Order> {
+    return this.#api<Order>('get', `orders/${orderId}`);
+  }
+
   /**
    * {@link https://monerium.dev/api-docs#operation/tokens}
    * @category Tokens
