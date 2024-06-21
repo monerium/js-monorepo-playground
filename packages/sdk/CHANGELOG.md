@@ -3,6 +3,13 @@
 ## [2.15.3](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.15.2...sdk-v2.15.3) (2024-06-21)
 
 
+### Bug Fixes
+
+* stuff ([a73254f](https://github.com/monerium/js-monorepo-playground/commit/a73254f2c67f7c84b7a67f30442b5adb5603dac2))
+
+## [2.15.3](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.15.2...sdk-v2.15.3) (2024-06-21)
+
+
 ### Miscellaneous
 
 * sdk test ([31590d1](https://github.com/monerium/js-monorepo-playground/commit/31590d12f94e71699284b56dc247ae3b51caf82f))
