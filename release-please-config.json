@@ -20,15 +20,15 @@
   "bump-minor-pre-major": true,
   "packages": {
     "apps/customer": { 
-      "pull-request-title-pattern": "Release customer {version} :rocket:",
+      "pull-request-title-pattern": ":rocket: Release customer ${version}",
       "package-name": "customer"
     },
     "packages/sdk": {
-      "pull-request-title-pattern": "Release sdk {version} :rocket:",
+      "pull-request-title-pattern": ":rocket: Release sdk ${version}",
       "package-name": "@monerium/sdk"
     },
     "packages/sdk-react-provider": {
-      "pull-request-title-pattern": "Release react provider {version} :rocket:",
+      "pull-request-title-pattern": ":rocket: Release react provider ${version}",
       "package-name": "@monerium/sdk-react-provider"
     }
   },
