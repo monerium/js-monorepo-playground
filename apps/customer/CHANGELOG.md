@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.5.2](https://github.com/monerium/js-monorepo-playground/compare/customer-v0.4.1...customer-v0.5.2) (2024-06-21)
+
+
+### Features
+
+* add poc for authorized routes ([0a3bf51](https://github.com/monerium/js-monorepo-playground/commit/0a3bf51055a1ca33ef7241de13027c4f710596bf))
+* working chain and currency filters ([34716af](https://github.com/monerium/js-monorepo-playground/commit/34716af78d531a29565639808477423428bf4c1e))
+
+
+### Bug Fixes
+
+* correct turbo tasks ([576c06b](https://github.com/monerium/js-monorepo-playground/commit/576c06b2b6cf203ac68f704df618431b81e7f3f5))
+* **Dockerfile:** apk update should come before apk add) ([d7b4845](https://github.com/monerium/js-monorepo-playground/commit/d7b4845046d718e3ed53164705f9a159eb0876ba))
+* landing page not rerouting with valid refresh token ([1eb3391](https://github.com/monerium/js-monorepo-playground/commit/1eb3391b2ba944121f8e73a50dfa6b61262375f2))
+* postcss and nextjs build ([de3b0cb](https://github.com/monerium/js-monorepo-playground/commit/de3b0cb5ee2484760c2be9baeb6f468bd1aaf13e))
+* remove unused component ([50bd068](https://github.com/monerium/js-monorepo-playground/commit/50bd0683568f40ff014e3e9312e0e6705ede1109))
+* versions ([6b655ab](https://github.com/monerium/js-monorepo-playground/commit/6b655abd34eddf82b3e5baaa35a3c9e6a1479795))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @monerium/sdk-react-provider bumped to 0.6.2
+
 ## [0.5.0](https://github.com/monerium/js-monorepo-playground/compare/customer-v0.4.1...customer-v0.5.0) (2024-06-21)
 
 
