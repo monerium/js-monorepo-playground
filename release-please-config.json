@@ -1,9 +1,8 @@
 {
   "group-pull-request-title-pattern": "Release ${branch} :rocket:",
-  "pull-request-title-pattern": "Packages depending on recent release",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
-  "separate-pull-requests": true,
-  "always-link-local": true,
+  "separate-pull-requests": false,
+  "plugins": ["node-workspace"],
   "changelog-sections": [
     { "type": "feat", "section": "Features", "hidden": false },
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
@@ -12,31 +11,17 @@
     { "type": "refactor", "section": "Refactors", "hidden": false },
     { "type": "revert", "section": "Revert", "hidden": false }
   ],
+  "release-type": "node",
+  "bump-minor-pre-major": true,
   "packages": {
     "apps/customer": { 
-      "group-pull-request-title-pattern": "Release ${branch} :rocket:",
-      "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
-      "package-name": "pack-customer",
-      "release-type": "node",
-      "bump-minor-pre-major": true,
-      "component": "customer"
+      "package-name": "customer"
     },
     "packages/sdk": {
-      "group-pull-request-title-pattern": "Release ${branch} :rocket:",
-      "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
-      "release-type": "node",
-      "bump-minor-pre-major": true,
-      "package-name": "@monerium/sdk",
-      "component": "sdk"
+      "package-name": "@monerium/sdk"
     },
     "packages/sdk-react-provider": {
-      "group-pull-request-title-pattern": "Release ${branch} :rocket:",
-      "pull-request-header": ":warning: Make sure to also update the SDK package! :warning:",
-      "pull-request-title-pattern": "Release ${component} ${version} :rocket:",
-      "release-type": "node",
-      "bump-minor-pre-major": true,
-      "package-name": "@monerium/sdk-react-provider",
-      "component": "sdk-react-provider"
+      "package-name": "@monerium/sdk-react-provider"
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/v16.10.2/schemas/config.json"
