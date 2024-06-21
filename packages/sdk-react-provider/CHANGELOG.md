@@ -20,6 +20,26 @@
 * update README ([8044580](https://github.com/monerium/js-monorepo-playground/commit/804458074f45fbcc774cfa5a64d987b20d8e4b87))
 * update README ([e6862d8](https://github.com/monerium/js-monorepo-playground/commit/e6862d833760a23ea845fb475d1fd51bf0c2b2ee))
 
+## [0.7.0](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.6.1...sdk-react-provider-v0.7.0) (2024-06-21)
+
+
+### Features
+
+* react ([f914aa0](https://github.com/monerium/js-monorepo-playground/commit/f914aa0c5b8b265a583255dc8771019f7218533f))
+* **sdk-react-provider:** export loadingAuth ([a265da2](https://github.com/monerium/js-monorepo-playground/commit/a265da24220e16c5c07490dbe313f5c65aef07f3))
+
+
+### Bug Fixes
+
+* add token types to sdk, + adjust data fetching sdk-provider ([f745348](https://github.com/monerium/js-monorepo-playground/commit/f745348e761372b146aae7d395c6574f30715dec))
+* cleanup ([ca0722f](https://github.com/monerium/js-monorepo-playground/commit/ca0722fde7eb03ee578ee0d228433af359b74fc2))
+
+
+### Documentation
+
+* update README ([8044580](https://github.com/monerium/js-monorepo-playground/commit/804458074f45fbcc774cfa5a64d987b20d8e4b87))
+* update README ([e6862d8](https://github.com/monerium/js-monorepo-playground/commit/e6862d833760a23ea845fb475d1fd51bf0c2b2ee))
+
 ## [0.6.0](https://github.com/monerium/js-monorepo-playground/compare/sdk-react-provider-v0.5.1...sdk-react-provider-v0.6.0) (2024-06-21)
 
 
