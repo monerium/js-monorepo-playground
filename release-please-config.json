@@ -1,14 +1,9 @@
 {
   "bootstrap-sha": "e683dd77acc325031a2b84e99fec6cf3a19ee8b5",
-  "pull-request-title-pattern": ":rocket: release ${component} ${version}",
+  "group-pull-request-title-pattern": "Release ${branch} ",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
   "separate-pull-requests": true,
-  "plugins": [
-    {
-      "type": "node-workspace",
-      "merge": false
-    }
-  ],
+  "plugins": ["node-workspace"],
   "changelog-sections": [
     { "type": "feat", "section": "Features", "hidden": false },
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
