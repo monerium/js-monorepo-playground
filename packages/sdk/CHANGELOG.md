@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.4](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.15.4...sdk-v2.15.4) (2024-06-21)
+
+
+### Documentation
+
+* readme.md ([0f1e95e](https://github.com/monerium/js-monorepo-playground/commit/0f1e95e267d23cb334de6771344d49cde64c573d))
+
 ## [2.15.4](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.15.2...sdk-v2.15.4) (2024-06-21)
 
 
