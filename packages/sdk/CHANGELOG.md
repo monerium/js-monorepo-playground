@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.0](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.14.3...sdk-v2.15.0) (2024-06-21)
+
+
+### Features
+
+* test feat ([15ad6e4](https://github.com/monerium/js-monorepo-playground/commit/15ad6e4baeaa3051172df6b49b9dc00fc5d872a8))
+
 ## [2.14.3](https://github.com/monerium/js-monorepo-playground/compare/sdk-v2.14.2...sdk-v2.14.3) (2024-06-21)
 
 
