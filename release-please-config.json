@@ -1,5 +1,5 @@
 {
-  "bootstrap-sha": "32f995cdb7ed885851345fae0dd6caad907b4223",
+  "bootstrap-sha": "e683dd77acc325031a2b84e99fec6cf3a19ee8b5",
   "pull-request-title-pattern": ":rocket: release ${component} ${version}",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
   "separate-pull-requests": true,
