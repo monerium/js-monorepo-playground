@@ -2,14 +2,8 @@
   "group-pull-request-title-pattern": "Release ${branch} :rocket:",
   "pull-request-title-pattern": "Packages depending on recent release",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
-  "separate-pull-requests": false,
+  "separate-pull-requests": true,
   "always-link-local": true,
-  "plugins": [
-    {
-      "type": "node-workspace",
-      "pull-request-title-pattern": "Packages depending on recent release"
-    }
-  ],
   "changelog-sections": [
     { "type": "feat", "section": "Features", "hidden": false },
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
@@ -44,5 +38,6 @@
       "package-name": "@monerium/sdk-react-provider",
       "component": "sdk-react-provider"
     }
-  }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/v16.10.2/schemas/config.json"
 }
