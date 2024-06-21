@@ -2,7 +2,7 @@
   "bootstrap-sha": "32f995cdb7ed885851345fae0dd6caad907b4223",
   "group-pull-request-title-pattern": "Release ${branch} :rocket:",
   "pull-request-header": ":robot: I have created a release *beep* *boop*",
-  "separate-pull-requests": true,
+  "separate-pull-requests": false,
   "plugins": [
     {
       "type": "node-workspace",
